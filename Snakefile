@@ -1,7 +1,17 @@
 rule all:
     input:
         "line_block_counts.txt",
+        "line_total_counts.txt",
+        "avg_line_lengths.txt"
+
+rule avg_line_lengths:
+    input:
+        "line_block_counts.txt",
         "line_total_counts.txt"
+    output:
+        "avg_line_lengths.txt"
+    script:
+        "AvgLineLength.py"
 
 rule count_line_blocks:
     input:
@@ -21,4 +31,4 @@ rule count_total_lines:
 
 rule clean:
     shell:
-        "rm line_total_counts.txt line_block_counts.txt"
+        "rm line_total_counts.txt line_block_counts.txt avg_line_lengths.txt"
