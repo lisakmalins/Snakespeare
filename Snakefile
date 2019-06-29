@@ -1,7 +1,7 @@
 rule all:
     input:
         "line_block_counts.txt",
-        "line_counts.txt"
+        "line_total_counts.txt"
 
 rule count_line_blocks:
     input:
@@ -9,16 +9,16 @@ rule count_line_blocks:
     output:
         "line_block_counts.txt"
     script:
-        "CountLines.py"
+        "CountLineBlocks.py"
 
-rule count_all_lines:
+rule count_total_lines:
     input:
         "raj.txt"
     output:
-        "line_counts.txt"
+        "line_total_counts.txt"
     script:
-        "CountAllLines.py"
+        "CountTotalLines.py"
 
 rule clean:
     shell:
-        "rm line_counts.txt line_block_counts.txt"
+        "rm line_total_counts.txt line_block_counts.txt"
