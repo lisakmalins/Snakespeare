@@ -1,5 +1,5 @@
 # Snakespeare
-Calculates line block count, total line count, and average line block length for characters in Shakespeare's tragedies _Romeo and Juliet_ and _Hamlet_.
+Calculates line block count, total line count, and average line block length for characters in Shakespeare's tragedies _Romeo & Juliet_ and _Hamlet_.
 
 ## Interesting statistics
 - **Hamlet** talks the most with over **1428 literal lines**.
