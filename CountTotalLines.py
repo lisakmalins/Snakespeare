@@ -5,6 +5,13 @@ for all important characters in Romeo & Juliet.
 
 from collections import defaultdict
 
+# Find start of play (skip title and character list)
+def FindPlayStart(lines):
+    for i in range (0, len(lines)):
+        if lines[i][:5] == "SCENE":
+            return i
+    return -1
+
 # Read in list of characters
 charsource = open("characters.txt", 'r')
 chars = charsource.readlines()
@@ -18,7 +25,7 @@ for i in range (0, len(chars)):
 chars_dict = defaultdict(int)
 playsource = open("raj.txt", 'r')
 lines = playsource.readlines()
-i = 48
+i = FindPlayStart(lines)
 while i < len(lines):
     line = lines[i].rstrip('\n').rstrip('.')
     if line in chars:

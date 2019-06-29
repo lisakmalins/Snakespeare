@@ -5,6 +5,13 @@ for all important characters in Romeo & Juliet.
 
 from collections import defaultdict
 
+# Find start of play (skip title and character list)
+def FindPlayStart(lines):
+    for i in range (0, len(lines)):
+        if lines[i][:5] == "SCENE":
+            return i
+    return -1
+
 # Read in list of characters
 charsource = open("characters.txt", 'r')
 chars = charsource.readlines()
@@ -17,10 +24,13 @@ for i in range (0, len(chars)):
 # Count each character's line blocks
 chars_dict = defaultdict(int)
 playsource = open("raj.txt", 'r')
-for line in playsource.readlines():
-    line = line.rstrip('\n').rstrip('.')
+lines = playsource.readlines()
+i = FindPlayStart(lines)
+while i < len(lines):
+    line = lines[i].rstrip('\n').rstrip('.')
     if line in chars:
         chars_dict[line] += 1
+    i += 1
 
 # Output to file
 output = open(snakemake.output[0], 'w')
