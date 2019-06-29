@@ -46,7 +46,7 @@ THE PROLOGUE
 
 [Enter Chorus.]
 
-Chor.
+Chorus.
 Two households, both alike in dignity,
   In fair Verona, where we lay our scene,
 From ancient grudge break to new mutiny,
@@ -1781,7 +1781,7 @@ Scene III. Friar Lawrence's Cell.
 
 [Enter Friar Lawrence with a basket.]
 
-Friar.
+Friar Lawrence.
 The grey-ey'd morn smiles on the frowning night,
 Chequering the eastern clouds with streaks of light;
 And flecked darkness like a drunkard reels
@@ -1818,7 +1818,7 @@ Full soon the canker death eats up that plant.
 Romeo.
 Good morrow, father!
 
-Friar.
+Friar Lawrence.
 Benedicite!
 What early tongue so sweet saluteth me?--
 Young son, it argues a distemper'd head
@@ -1835,14 +1835,14 @@ Our Romeo hath not been in bed to-night.
 Romeo.
 That last is true; the sweeter rest was mine.
 
-Friar.
+Friar Lawrence.
 God pardon sin! wast thou with Rosaline?
 
 Romeo.
 With Rosaline, my ghostly father? no;
 I have forgot that name, and that name's woe.
 
-Friar.
+Friar Lawrence.
 That's my good son: but where hast thou been then?
 
 Romeo.
@@ -1854,7 +1854,7 @@ Within thy help and holy physic lies;
 I bear no hatred, blessed man; for, lo,
 My intercession likewise steads my foe.
 
-Friar.
+Friar Lawrence.
 Be plain, good son, and homely in thy drift;
 Riddling confession finds but riddling shrift.
 
@@ -1868,7 +1868,7 @@ We met, we woo'd, and made exchange of vow,
 I'll tell thee as we pass; but this I pray,
 That thou consent to marry us to-day.
 
-Friar.
+Friar Lawrence.
 Holy Saint Francis! what a change is here!
 Is Rosaline, that thou didst love so dear,
 So soon forsaken? young men's love, then, lies
@@ -1889,13 +1889,13 @@ Women may fall, when there's no strength in men.
 Romeo.
 Thou chidd'st me oft for loving Rosaline.
 
-Friar.
+Friar Lawrence.
 For doting, not for loving, pupil mine.
 
 Romeo.
 And bad'st me bury love.
 
-Friar.
+Friar Lawrence.
 Not in a grave
 To lay one in, another out to have.
 
@@ -1904,7 +1904,7 @@ I pray thee chide not: she whom I love now
 Doth grace for grace and love for love allow;
 The other did not so.
 
-Friar.
+Friar Lawrence.
 O, she knew well
 Thy love did read by rote, that could not spell.
 But come, young waverer, come go with me,
@@ -1915,7 +1915,7 @@ To turn your households' rancour to pure love.
 Romeo.
 O, let us hence; I stand on sudden haste.
 
-Friar.
+Friar Lawrence.
 Wisely, and slow; they stumble that run fast.
 
 [Exeunt.]
@@ -2444,7 +2444,7 @@ Scene VI. Friar Lawrence's Cell.
 
 [Enter Friar Lawrence and Romeo.]
 
-Friar.
+Friar Lawrence.
 So smile the heavens upon this holy act
 That after-hours with sorrow chide us not!
 
@@ -2456,7 +2456,7 @@ Do thou but close our hands with holy words,
 Then love-devouring death do what he dare,--
 It is enough I may but call her mine.
 
-Friar.
+Friar Lawrence.
 These violent delights have violent ends,
 And in their triumph die; like fire and powder,
 Which, as they kiss, consume: the sweetest honey
@@ -2475,7 +2475,7 @@ And yet not fall; so light is vanity.
 Juliet.
 Good-even to my ghostly confessor.
 
-Friar.
+Friar Lawrence.
 Romeo shall thank thee, daughter, for us both.
 
 Juliet.
@@ -2496,7 +2496,7 @@ They are but beggars that can count their worth;
 But my true love is grown to such excess,
 I cannot sum up sum of half my wealth.
 
-Friar.
+Friar Lawrence.
 Come, come with me, and we will make short work;
 For, by your leaves, you shall not stay alone
 Till holy church incorporate two in one.
@@ -3064,7 +3064,7 @@ Scene III. Friar Lawrence's cell.
 
 [Enter Friar Lawrence.]
 
-Friar.
+Friar Lawrence.
 Romeo, come forth; come forth, thou fearful man.
 Affliction is enanmour'd of thy parts,
 And thou art wedded to calamity.
@@ -3076,7 +3076,7 @@ Father, what news?  what is the prince's doom
 What sorrow craves acquaintance at my hand,
 That I yet know not?
 
-Friar.
+Friar Lawrence.
 Too familiar
 Is my dear son with such sour company:
 I bring thee tidings of the prince's doom.
@@ -3084,7 +3084,7 @@ I bring thee tidings of the prince's doom.
 Romeo.
 What less than doomsday is the prince's doom?
 
-Friar.
+Friar Lawrence.
 A gentler judgment vanish'd from his lips,--
 Not body's death, but body's banishment.
 
@@ -3093,7 +3093,7 @@ Ha, banishment? be merciful, say death;
 For exile hath more terror in his look,
 Much more than death; do not say banishment.
 
-Friar.
+Friar Lawrence.
 Hence from Verona art thou banished:
 Be patient, for the world is broad and wide.
 
@@ -3106,7 +3106,7 @@ Is death mis-term'd: calling death banishment,
 Thou cutt'st my head off with a golden axe,
 And smil'st upon the stroke that murders me.
 
-Friar.
+Friar Lawrence.
 O deadly sin! O rude unthankfulness!
 Thy fault our law calls death; but the kind prince,
 Taking thy part, hath brush'd aside the law,
@@ -3137,13 +3137,13 @@ Being a divine, a ghostly confessor,
 A sin-absolver, and my friend profess'd,
 To mangle me with that word banishment?
 
-Friar.
+Friar Lawrence.
 Thou fond mad man, hear me speak a little,--
 
 Romeo.
 O, thou wilt speak again of banishment.
 
-Friar.
+Friar Lawrence.
 I'll give thee armour to keep off that word;
 Adversity's sweet milk, philosophy,
 To comfort thee, though thou art banished.
@@ -3154,13 +3154,13 @@ Unless philosophy can make a Juliet,
 Displant a town, reverse a prince's doom,
 It helps not, it prevails not,--talk no more.
 
-Friar.
+Friar Lawrence.
 O, then I see that madmen have no ears.
 
 Romeo.
 How should they, when that wise men have no eyes?
 
-Friar.
+Friar Lawrence.
 Let me dispute with thee of thy estate.
 
 Romeo.
@@ -3174,7 +3174,7 @@ Taking the measure of an unmade grave.
 
 [Knocking within.]
 
-Friar.
+Friar Lawrence.
 Arise; one knocks. Good Romeo, hide thyself.
 
 Romeo.
@@ -3183,7 +3183,7 @@ Mist-like infold me from the search of eyes.
 
 [Knocking.]
 
-Friar.
+Friar Lawrence.
 Hark, how they knock!--Who's there?--Romeo, arise;
 Thou wilt be taken.--Stay awhile;--Stand up;
 
@@ -3200,7 +3200,7 @@ Nurse.
 [Within.] Let me come in, and you shall know my errand;
 I come from Lady Juliet.
 
-Friar.
+Friar Lawrence.
 Welcome then.
 
 [Enter Nurse.]
@@ -3209,14 +3209,14 @@ Nurse.
 O holy friar, O, tell me, holy friar,
 Where is my lady's lord, where's Romeo?
 
-Friar.
+Friar Lawrence.
 There on the ground, with his own tears made drunk.
 
 Nurse.
 O, he is even in my mistress' case,--
 Just in her case!
 
-Friar.
+Friar Lawrence.
 O woeful sympathy!
 Piteous predicament!
 
@@ -3258,7 +3258,7 @@ The hateful mansion.
 
 [Drawing his sword.]
 
-Friar.
+Friar Lawrence.
 Hold thy desperate hand:
 Art thou a man? thy form cries out thou art;
 Thy tears are womanish; thy wild acts denote
@@ -3328,7 +3328,7 @@ Hie you, make haste, for it grows very late.
 Romeo.
 How well my comfort is reviv'd by this!
 
-Friar.
+Friar Lawrence.
 Go hence; good night! and here stands all your state:
 Either be gone before the watch be set,
 Or by the break of day disguis'd from hence.
@@ -3830,14 +3830,14 @@ Scene I. Friar Lawrence's Cell.
 
 [Enter Friar Lawrence and Paris.]
 
-Friar.
+Friar Lawrence.
 On Thursday, sir? the time is very short.
 
 Paris.
 My father Capulet will have it so;
 And I am nothing slow to slack his haste.
 
-Friar.
+Friar Lawrence.
 You say you do not know the lady's mind:
 Uneven is the course; I like it not.
 
@@ -3853,7 +3853,7 @@ Which, too much minded by herself alone,
 May be put from her by society:
 Now do you know the reason of this haste.
 
-Friar.
+Friar Lawrence.
 [Aside.] I would I knew not why it should be slow'd.--
 Look, sir, here comes the lady toward my cell.
 
@@ -3871,7 +3871,7 @@ That may be must be, love, on Thursday next.
 Juliet.
 What must be shall be.
 
-Friar.
+Friar Lawrence.
 That's a certain text.
 
 Paris.
@@ -3915,7 +3915,7 @@ It may be so, for it is not mine own.--
 Are you at leisure, holy father, now;
 Or shall I come to you at evening mass?
 
-Friar.
+Friar Lawrence.
 My leisure serves me, pensive daughter, now.--
 My lord, we must entreat the time alone.
 
@@ -3930,7 +3930,7 @@ Juliet.
 O, shut the door! and when thou hast done so,
 Come weep with me; past hope, past cure, past help!
 
-Friar.
+Friar Lawrence.
 Ah, Juliet, I already know thy grief;
 It strains me past the compass of my wits:
 I hear thou must, and nothing may prorogue it,
@@ -3956,7 +3956,7 @@ Could to no issue of true honour bring.
 Be not so long to speak; I long to die,
 If what thou speak'st speak not of remedy.
 
-Friar.
+Friar Lawrence.
 Hold, daughter. I do spy a kind of hope,
 Which craves as desperate an execution
 As that is desperate which we would prevent.
@@ -3981,7 +3981,7 @@ Things that, to hear them told, have made me tremble;
 And I will do it without fear or doubt,
 To live an unstain'd wife to my sweet love.
 
-Friar.
+Friar Lawrence.
 Hold, then; go home, be merry, give consent
 To marry Paris: Wednesday is to-morrow;
 To-morrow night look that thou lie alone,
@@ -4018,7 +4018,7 @@ Abate thy valour in the acting it.
 Juliet.
 Give me, give me!  O, tell not me of fear!
 
-Friar.
+Friar Lawrence.
 Hold; get you gone, be strong and prosperous
 In this resolve: I'll send a friar with speed
 To Mantua, with my letters to thy lord.
@@ -4362,7 +4362,7 @@ Ties up my tongue and will not let me speak.
 
 [Enter Friar Lawrence and Paris, with Musicians.]
 
-Friar.
+Friar Lawrence.
 Come, is the bride ready to go to church?
 
 Capulet.
@@ -4408,7 +4408,7 @@ O child! O child!--my soul, and not my child!--
 Dead art thou, dead!--alack, my child is dead;
 And with my child my joys are buried!
 
-Friar.
+Friar Lawrence.
 Peace, ho, for shame! confusion's cure lives not
 In these confusions. Heaven and yourself
 Had part in this fair maid; now heaven hath all,
@@ -4438,14 +4438,14 @@ Our solemn hymns to sullen dirges change;
 Our bridal flowers serve for a buried corse,
 And all things change them to the contrary.
 
-Friar.
+Friar Lawrence.
 Sir, go you in,--and, madam, go with him;--
 And go, Sir Paris;--every one prepare
 To follow this fair corse unto her grave:
 The heavens do lower upon you for some ill;
 Move them no more by crossing their high will.
 
-[Exeunt Capulet, Lady Capulet, Paris, and Friar.]
+[Exeunt Capulet, Lady Capulet, Paris, and Friar Lawrence.]
 
 1 Musician.
 Faith, we may put up our pipes and be gone.
@@ -4933,7 +4933,7 @@ Thy drugs are quick.--Thus with a kiss I die.
 [Enter, at the other end of the Churchyard, Friar Lawrence, with
 a lantern, crow, and spade.]
 
-Friar.
+Friar Lawrence.
 Saint Francis be my speed! how oft to-night
 Have my old feet stumbled at graves!--Who's there?
 Who is it that consorts, so late, the dead?
@@ -4941,7 +4941,7 @@ Who is it that consorts, so late, the dead?
 Balthasar.
 Here's one, a friend, and one that knows you well.
 
-Friar.
+Friar Lawrence.
 Bliss be upon you! Tell me, good my friend,
 What torch is yond that vainly lends his light
 To grubs and eyeless skulls? as I discern,
@@ -4951,19 +4951,19 @@ Balthasar.
 It doth so, holy sir; and there's my master,
 One that you love.
 
-Friar.
+Friar Lawrence.
 Who is it?
 
 Balthasar.
 Romeo.
 
-Friar.
+Friar Lawrence.
 How long hath he been there?
 
 Balthasar.
 Full half an hour.
 
-Friar.
+Friar Lawrence.
 Go with me to the vault.
 
 Balthasar.
@@ -4972,7 +4972,7 @@ My master knows not but I am gone hence;
 And fearfully did menace me with death
 If I did stay to look on his intents.
 
-Friar.
+Friar Lawrence.
 Stay then; I'll go alone:--fear comes upon me;
 O, much I fear some ill unlucky thing.
 
@@ -4981,7 +4981,7 @@ As I did sleep under this yew tree here,
 I dreamt my master and another fought,
 And that my master slew him.
 
-Friar.
+Friar Lawrence.
 Romeo! [Advances.]
 Alack, alack! what blood is this which stains
 The stony entrance of this sepulchre?--
@@ -5003,7 +5003,7 @@ And there I am:--where is my Romeo?
 
 [Noise within.]
 
-Friar.
+Friar Lawrence.
 I hear some noise.--Lady, come from that nest
 Of death, contagion, and unnatural sleep:
 A greater power than we can contradict
@@ -5152,7 +5152,7 @@ And lead you even to death: meantime forbear,
 And let mischance be slave to patience.--
 Bring forth the parties of suspicion.
 
-Friar.
+Friar Lawrence.
 I am the greatest, able to do least,
 Yet most suspected, as the time and place
 Doth make against me, of this direful murder;
@@ -5162,7 +5162,7 @@ Myself condemned and myself excus'd.
 Prince.
 Then say at once what thou dost know in this.
 
-Friar.
+Friar Lawrence.
 I will be brief, for my short date of breath
 Is not so long as is a tedious tale.
 Romeo, there dead, was husband to that Juliet;

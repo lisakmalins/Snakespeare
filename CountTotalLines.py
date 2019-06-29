@@ -35,10 +35,6 @@ while i < len(lines):
     else:
         i += 1
 
-# Correct Friar Lawrence who is sometimes called just Friar
-chars_dict["Friar Lawrence"] += chars_dict["Friar"]
-chars_dict.pop("Friar")
-
 # Output to file
 output = open(snakemake.output[0], 'w')
 for c, f in chars_dict.items():
