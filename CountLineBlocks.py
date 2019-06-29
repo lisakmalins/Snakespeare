@@ -17,9 +17,6 @@ charsource = open(snakemake.input[1], 'r')
 chars = charsource.readlines()
 charsource.close()
 
-for char in chars:
-    print(char)
-
 # Remove newlines
 for i in range (0, len(chars)):
     chars[i] = chars[i].rstrip('\n')
