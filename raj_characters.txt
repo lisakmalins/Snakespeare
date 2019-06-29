@@ -6,7 +6,6 @@ Romeo
 Mercutio
 Benvolio
 Tybalt
-Friar
 Friar Lawrence
 Friar John
 Balthasar

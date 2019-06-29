@@ -1,34 +1,38 @@
+PLAYS=["raj", "ham"]
+
 rule all:
     input:
-        "line_block_counts.txt",
-        "line_total_counts.txt",
-        "avg_line_lengths.txt"
+        expand("{play}_line_block_counts.txt", play=PLAYS),
+        expand("{play}_line_total_counts.txt", play=PLAYS),
+        expand("{play}_avg_line_lengths.txt", play=PLAYS)
 
 rule avg_line_lengths:
     input:
-        "line_block_counts.txt",
-        "line_total_counts.txt"
+        "{play}_line_block_counts.txt",
+        "{play}_line_total_counts.txt"
     output:
-        "avg_line_lengths.txt"
+        "{play}_avg_line_lengths.txt"
     script:
         "AvgLineLength.py"
 
 rule count_line_blocks:
     input:
-        "raj.txt"
+        "{play}.txt",
+        "{play}_characters.txt"
     output:
-        "line_block_counts.txt"
+        "{play}_line_block_counts.txt"
     script:
         "CountLineBlocks.py"
 
 rule count_total_lines:
     input:
-        "raj.txt"
+        "{play}.txt",
+        "{play}_characters.txt"
     output:
-        "line_total_counts.txt"
+        "{play}_line_total_counts.txt"
     script:
         "CountTotalLines.py"
 
 rule clean:
     shell:
-        "rm line_total_counts.txt line_block_counts.txt avg_line_lengths.txt"
+        "rm *_line_total_counts.txt *_line_block_counts.txt *_avg_line_lengths.txt"
