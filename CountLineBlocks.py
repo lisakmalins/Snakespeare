@@ -27,6 +27,7 @@ playsource = open(snakemake.input[0], 'r')
 lines = playsource.readlines()
 i = FindPlayStart(lines)
 while i < len(lines):
+    # Get line and strip to compare with chars list
     line = lines[i].rstrip('\n').rstrip('.').lstrip()
     if line in chars:
         chars_dict[line] += 1
