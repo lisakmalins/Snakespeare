@@ -30,4 +30,6 @@ Counts the average line block length for salient characters in _Romeo & Juliet_ 
 git clone https://github.com/lisakmalins/Snakespeare.git
 cd Snakespeare
 snakemake
+ls output
 ```
+All output will appear as tab-delimited text files in `output/` directory.
