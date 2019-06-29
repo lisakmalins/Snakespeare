@@ -18,20 +18,20 @@ for i in range (0, len(chars)):
 chars_dict = defaultdict(int)
 playsource = open("raj.txt", 'r')
 lines = playsource.readlines()
-i = 0
+i = 48
 while i < len(lines):
     line = lines[i].rstrip('\n').rstrip('.')
     if line in chars:
         i += 1
         if i >= len(lines):
             break
-        nextline = lines[i].rstrip('\n').rstrip('.')
-        while not nextline in chars:
+        nextline = lines[i]
+        while nextline != "\n":
             chars_dict[line] += 1
             i += 1
             if i >= len(lines):
                 break
-            nextline = lines[i].rstrip('\n').rstrip('.')
+            nextline = lines[i]
     else:
         i += 1
 
