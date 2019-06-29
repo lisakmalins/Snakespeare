@@ -1,3 +1,8 @@
+"""
+Counts line blocks, as in contiguous chunks of dialogue,
+for all important characters in Romeo & Juliet.
+"""
+
 from collections import defaultdict
 
 # Read in list of characters

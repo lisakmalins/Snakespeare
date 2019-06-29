@@ -1,3 +1,8 @@
+"""
+Counts total lines, as in lines of iambic pentameter,
+for all important characters in Romeo & Juliet.
+"""
+
 from collections import defaultdict
 
 # Read in list of characters
