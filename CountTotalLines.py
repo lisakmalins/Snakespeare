@@ -27,20 +27,18 @@ playsource = open(snakemake.input[0], 'r')
 lines = playsource.readlines()
 i = FindPlayStart(lines)
 while i < len(lines):
-    # Get line and strip to compare with chars list 
+    # Get line and strip to compare with chars list
     line = lines[i].rstrip('\n').rstrip('.').lstrip()
     if line in chars:
         # If char name found, count how many lines follow
-        i += 1
-        if i >= len(lines):
-            break
-        nextline = lines[i]
-        while nextline != "\n":
-            chars_dict[line] += 1
+        while True:
             i += 1
-            if i >= len(lines):
+            # Stop if i out of range (end of play)
+            # or if newline encountered (end of line block)
+            if i >= len(lines) or lines[i] == "\n":
                 break
-            nextline = lines[i]
+            # Increment num lines for this character
+            chars_dict[line] += 1
     else:
         i += 1
 
