@@ -4,15 +4,6 @@ rule all:
     input:
         expand("output/{play}_avg_line_lengths.txt", play=PLAYS)
 
-rule avg_line_lengths:
-    input:
-        "output/{play}_line_block_counts.txt",
-        "output/{play}_line_total_counts.txt"
-    output:
-        "output/{play}_avg_line_lengths.txt"
-    script:
-        "AvgLineLength.py"
-
 rule count_line_blocks:
     input:
         "texts/{play}.txt",
@@ -30,6 +21,15 @@ rule count_total_lines:
         "output/{play}_line_total_counts.txt"
     script:
         "CountTotalLines.py"
+
+rule avg_line_lengths:
+    input:
+        "output/{play}_line_block_counts.txt",
+        "output/{play}_line_total_counts.txt"
+    output:
+        "output/{play}_avg_line_lengths.txt"
+    script:
+        "AvgLineLength.py"
 
 rule clean:
     shell:
