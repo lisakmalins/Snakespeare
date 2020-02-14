@@ -33,5 +33,9 @@ rule avg_line_lengths:
         "AvgLineLength.py"
 
 rule clean:
-    shell:
-        "rm output/*_line_total_counts.txt output/*_line_block_counts.txt output/*_avg_line_lengths.txt"
+    shell: """
+    for dir in data/line_blocks data/total_lines data/avg_line_lengths
+    do
+        if [ -d $dir ]; then rm -r $dir; fi
+    done
+    """
