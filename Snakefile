@@ -1,8 +1,8 @@
-PLAYS=["raj", "ham"]
+configfile: "config.yaml"
 
 rule all:
     input:
-        expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=PLAYS)
+        expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=config["plays"])
 
 
 rule count_line_blocks:
