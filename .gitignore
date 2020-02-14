@@ -1,6 +1,2 @@
-line_total_counts.txt
-line_block_counts.txt
-avg_line_lengths.txt
-*_line_total_counts.txt
-*_line_block_counts.txt
-*_avg_line_lengths.txt
+.snakemake/
+data/
