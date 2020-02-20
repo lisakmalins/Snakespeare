@@ -40,7 +40,8 @@ configfile: "config.yaml"
 # it will look at the rules below to find out how to make them.
 rule targets:
     input:
-        expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=config["plays"])
+        expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=config["plays"]),
+        expand("data/plots/{play}_total_lines_per_character.{ext}", play=config["plays"], ext=["png", "pdf"])
 
 # How many dialogue chunks does each character have?
 # (In other words, how many times does each character start talking?
@@ -75,6 +76,24 @@ rule avg_line_lengths:
         "data/avg_line_lengths/{play}_avg_line_block_lengths.txt"
     script:
         "AvgLineLength.py"
+
+def wildcard_to_title(wildcards):
+    if wildcards.play == "ham":
+        return "Hamlet"
+    elif wildcards.play == "raj":
+        return "Romeo_and_Juliet"
+    else:
+        raise Exception("Snakefile says: Cannot convert play wildcard to title.")
+
+rule plot_total_lines:
+    input:
+        "data/total_lines/{play}_total_lines_per_character.txt"
+    output:
+        "data/plots/{play}_total_lines_per_character.{ext}"
+    params:
+        title=wildcard_to_title
+    shell:
+        "Rscript TotalLines.R {input} {output} {params.title}"
 
 # Convenience rule to remove all output.
 # Run with command: snakemake clean
