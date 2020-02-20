@@ -41,7 +41,8 @@ configfile: "config.yaml"
 rule targets:
     input:
         expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=config["plays"]),
-        expand("data/plots/{play}_total_lines_per_character.{ext}", play=config["plays"], ext=["png", "pdf"])
+        expand("data/plots/{play}_total_lines_per_character.{ext}", play=config["plays"], ext=["png", "pdf"]),
+        expand("data/plots/{play}_line_blocks_per_character.{ext}", play=config["plays"], ext=["png", "pdf"])
 
 # How many dialogue chunks does each character have?
 # (In other words, how many times does each character start talking?
@@ -84,6 +85,16 @@ def wildcard_to_title(wildcards):
         return "Romeo_and_Juliet"
     else:
         raise Exception("Snakefile says: Cannot convert play wildcard to title.")
+
+rule plot_line_blocks:
+    input:
+        "data/line_blocks/{play}_line_blocks_per_character.txt"
+    output:
+        "data/plots/{play}_line_blocks_per_character.{ext}"
+    params:
+        title=wildcard_to_title
+    shell:
+        "Rscript LineBlocks.R {input} {output} {params.title}"
 
 rule plot_total_lines:
     input:
