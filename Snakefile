@@ -40,10 +40,9 @@ configfile: "config.yaml"
 # it will look at the rules below to find out how to make them.
 rule targets:
     input:
-        expand("data/chunk_lengths/{play}_avg_chunk_length_per_char.txt", play=config["plays"]),
-        expand("data/plots/{play}_total_lines_per_char.{ext}", play=config["plays"], ext=["png", "pdf"]),
-        expand("data/plots/{play}_dialogue_chunks_per_char.{ext}", play=config["plays"], ext=["png", "pdf"]),
-        expand("data/plots/{play}_avg_chunk_length_per_char.{ext}", play=config["plays"], ext=["png", "pdf"])
+        expand("data/plots/{play}_total_lines_per_char.png", play=config["plays"]),
+        expand("data/plots/{play}_dialogue_chunks_per_char.png", play=config["plays"]),
+        expand("data/plots/{play}_avg_chunk_length_per_char.png", play=config["plays"])
 
 # How many dialogue chunks does each character have?
 # (In other words, how many times does each character start talking?
@@ -91,7 +90,7 @@ rule plot_dialogue_chunks:
     input:
         "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt"
     output:
-        "data/plots/{play}_dialogue_chunks_per_char.{ext}"
+        "data/plots/{play}_dialogue_chunks_per_char.png"
     params:
         title=wildcard_to_title
     shell:
@@ -101,7 +100,7 @@ rule plot_total_lines:
     input:
         "data/total_lines/{play}_total_lines_per_char.txt"
     output:
-        "data/plots/{play}_total_lines_per_char.{ext}"
+        "data/plots/{play}_total_lines_per_char.png"
     params:
         title=wildcard_to_title
     shell:
@@ -111,7 +110,7 @@ rule plot_chunk_lengths:
     input:
         "data/chunk_lengths/{play}_avg_chunk_length_per_char.txt"
     output:
-        "data/plots/{play}_avg_chunk_length_per_char.{ext}"
+        "data/plots/{play}_avg_chunk_length_per_char.png"
     params:
         title=wildcard_to_title
     shell:
