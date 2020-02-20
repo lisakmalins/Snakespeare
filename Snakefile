@@ -18,12 +18,12 @@ The "targets" rule lists the end goals of the workflow.
 It always appears as the first rule of the Snakefile.
 In the targets rule, we see this expand function:
 
-    expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=config["plays"])
+    expand("data/chunk_lengths/{play}_avg_chunk_length_per_char.txt", play=config["plays"])
 
 Since there are 2 plays, Snakemake reads 2 wildcard values from the config file,
 and expands to create 2 end filenames:
 
-    "data/avg_line_lengths/ham_avg_line_block_lengths.txt   data/avg_line_lengths/raj_avg_line_block_lengths.txt"
+    "data/chunk_lengths/ham_avg_chunk_length_per_char.txt   data/chunk_lengths/raj_avg_chunk_length_per_char.txt"
                            ^^^                                                    ^^^
 
 Snakemake knows that those 2 files are the end goal.
@@ -40,20 +40,20 @@ configfile: "config.yaml"
 # it will look at the rules below to find out how to make them.
 rule targets:
     input:
-        expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=config["plays"]),
-        expand("data/plots/{play}_total_lines_per_character.{ext}", play=config["plays"], ext=["png", "pdf"]),
-        expand("data/plots/{play}_line_blocks_per_character.{ext}", play=config["plays"], ext=["png", "pdf"]),
-        expand("data/plots/{play}_avg_line_block_lengths.{ext}", play=config["plays"], ext=["png", "pdf"])
+        expand("data/chunk_lengths/{play}_avg_chunk_length_per_char.txt", play=config["plays"]),
+        expand("data/plots/{play}_total_lines_per_char.{ext}", play=config["plays"], ext=["png", "pdf"]),
+        expand("data/plots/{play}_dialogue_chunks_per_char.{ext}", play=config["plays"], ext=["png", "pdf"]),
+        expand("data/plots/{play}_avg_chunk_length_per_char.{ext}", play=config["plays"], ext=["png", "pdf"])
 
 # How many dialogue chunks does each character have?
 # (In other words, how many times does each character start talking?
 # After they start talking, they could say several lines of iambic pentameter.)
-rule count_line_blocks:
+rule count_dialogue_chunks:
     input:
         "data/texts/{play}.txt",
         "data/texts/{play}_characters.txt"
     output:
-        "data/line_blocks/{play}_line_blocks_per_character.txt"
+        "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt"
     script:
         "CountLineBlocks.py"
 
@@ -63,19 +63,19 @@ rule count_total_lines:
         "data/texts/{play}.txt",
         "data/texts/{play}_characters.txt"
     output:
-        "data/total_lines/{play}_total_lines_per_character.txt"
+        "data/total_lines/{play}_total_lines_per_char.txt"
     script:
         "CountTotalLines.py"
 
 # How long are each character's dialogue chunks, on average?
 # (In other words, once a character starts talking,
 # how many lines of iambic pentameter do they usually say?)
-rule avg_line_lengths:
+rule chunk_lengths:
     input:
-        "data/line_blocks/{play}_line_blocks_per_character.txt",
-        "data/total_lines/{play}_total_lines_per_character.txt"
+        "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt",
+        "data/total_lines/{play}_total_lines_per_char.txt"
     output:
-        "data/avg_line_lengths/{play}_avg_line_block_lengths.txt"
+        "data/chunk_lengths/{play}_avg_chunk_length_per_char.txt"
     script:
         "AvgLineLength.py"
 
@@ -87,11 +87,11 @@ def wildcard_to_title(wildcards):
     else:
         raise Exception("Snakefile says: Cannot convert play wildcard to title.")
 
-rule plot_line_blocks:
+rule plot_dialogue_chunks:
     input:
-        "data/line_blocks/{play}_line_blocks_per_character.txt"
+        "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt"
     output:
-        "data/plots/{play}_line_blocks_per_character.{ext}"
+        "data/plots/{play}_dialogue_chunks_per_char.{ext}"
     params:
         title=wildcard_to_title
     shell:
@@ -99,19 +99,19 @@ rule plot_line_blocks:
 
 rule plot_total_lines:
     input:
-        "data/total_lines/{play}_total_lines_per_character.txt"
+        "data/total_lines/{play}_total_lines_per_char.txt"
     output:
-        "data/plots/{play}_total_lines_per_character.{ext}"
+        "data/plots/{play}_total_lines_per_char.{ext}"
     params:
         title=wildcard_to_title
     shell:
         "Rscript TotalLines.R {input} {output} {params.title}"
 
-rule plot_avg_line_lengths:
+rule plot_chunk_lengths:
     input:
-        "data/avg_line_lengths/{play}_avg_line_block_lengths.txt"
+        "data/chunk_lengths/{play}_avg_chunk_length_per_char.txt"
     output:
-        "data/plots/{play}_avg_line_block_lengths.{ext}"
+        "data/plots/{play}_avg_chunk_length_per_char.{ext}"
     params:
         title=wildcard_to_title
     shell:
@@ -121,7 +121,7 @@ rule plot_avg_line_lengths:
 # Run with command: snakemake clean
 rule clean:
     shell: """
-    for dir in data/line_blocks data/total_lines data/avg_line_lengths
+    for dir in data/dialogue_chunks data/total_lines data/chunk_lengths
     do
         if [ -d $dir ]; then rm -r $dir; fi
     done
