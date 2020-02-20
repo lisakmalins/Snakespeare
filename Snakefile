@@ -42,7 +42,8 @@ rule targets:
     input:
         expand("data/avg_line_lengths/{play}_avg_line_block_lengths.txt", play=config["plays"]),
         expand("data/plots/{play}_total_lines_per_character.{ext}", play=config["plays"], ext=["png", "pdf"]),
-        expand("data/plots/{play}_line_blocks_per_character.{ext}", play=config["plays"], ext=["png", "pdf"])
+        expand("data/plots/{play}_line_blocks_per_character.{ext}", play=config["plays"], ext=["png", "pdf"]),
+        expand("data/plots/{play}_avg_line_block_lengths.{ext}", play=config["plays"], ext=["png", "pdf"])
 
 # How many dialogue chunks does each character have?
 # (In other words, how many times does each character start talking?
@@ -105,6 +106,16 @@ rule plot_total_lines:
         title=wildcard_to_title
     shell:
         "Rscript TotalLines.R {input} {output} {params.title}"
+
+rule plot_avg_line_lengths:
+    input:
+        "data/avg_line_lengths/{play}_avg_line_block_lengths.txt"
+    output:
+        "data/plots/{play}_avg_line_block_lengths.{ext}"
+    params:
+        title=wildcard_to_title
+    shell:
+        "Rscript LineLengths.R {input} {output} {params.title}"
 
 # Convenience rule to remove all output.
 # Run with command: snakemake clean
