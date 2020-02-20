@@ -1,4 +1,4 @@
-# Usage: Rscript TotalLines.R {input.txt} {output.png} {title_of_play_with_underscores}
+# Usage: Rscript total_lines.R {input.txt} {output.png} {title_of_play_with_underscores}
 
 library(ggplot2)
 library(readr)
@@ -15,16 +15,16 @@ cat("Saving total line plot to:\t", output, fill=TRUE)
 cat("Title of play:\t", title, fill=TRUE)
 
 # Load data
-total_lines = read_delim(source, 
-                         delim="\t", 
-                         col_names=c("character", "total_lines"), 
+total_lines = read_delim(source,
+                         delim="\t",
+                         col_names=c("character", "total_lines"),
                          col_types="cd")
 
 # Plot data
 ggplot(total_lines, aes(x=reorder(character, total_lines), y=total_lines)) +
   geom_bar(stat="identity") +
-  labs(y="Lines of iambic pentameter", 
-       x=NULL, 
+  labs(y="Lines of iambic pentameter",
+       x=NULL,
        title=paste("Total lines of iambic pentameter by character in", title)) +
   coord_flip()
 

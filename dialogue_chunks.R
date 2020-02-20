@@ -1,4 +1,4 @@
-# Usage: Rscript LineLengths.R {input.txt} {output.png} {title_of_play_with_underscores}
+# Usage: Rscript dialogue_chunks.R {input.txt} {output.png} {title_of_play_with_underscores}
 
 library(ggplot2)
 library(readr)
@@ -15,17 +15,17 @@ cat("Saving total line plot to:\t", output, fill=TRUE)
 cat("Title of play:\t", title, fill=TRUE)
 
 # Load data
-avg_line_length = read_delim(source, 
-                         delim="\t", 
-                         col_names=c("character", "avg_line_length"), 
+dialogue_chunks = read_delim(source,
+                         delim="\t",
+                         col_names=c("character", "num_chunks"),
                          col_types="cd")
 
 # Plot data
-ggplot(avg_line_length, aes(x=reorder(character, avg_line_length), y=avg_line_length)) +
+ggplot(dialogue_chunks, aes(x=reorder(character, num_chunks), y=num_chunks)) +
   geom_bar(stat="identity") +
-  labs(y="Average lines per dialogue chunk", 
-       x=NULL, 
-       title=paste("Average lines per dialogue chunk by character in", title)) +
+  labs(y="Number of dialogue chunks",
+       x=NULL,
+       title=paste("Number of dialogue chunks by character in", title)) +
   coord_flip()
 
 # Save

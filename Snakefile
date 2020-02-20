@@ -95,7 +95,7 @@ rule plot_dialogue_chunks:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript LineBlocks.R {input} {output} {params.title}"
+        "Rscript dialogue_chunks.R {input} {output} {params.title}"
 
 rule plot_total_lines:
     input:
@@ -105,7 +105,7 @@ rule plot_total_lines:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript TotalLines.R {input} {output} {params.title}"
+        "Rscript total_lines.R {input} {output} {params.title}"
 
 rule plot_chunk_lengths:
     input:
@@ -115,7 +115,7 @@ rule plot_chunk_lengths:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript LineLengths.R {input} {output} {params.title}"
+        "Rscript avg_chunk_length.R {input} {output} {params.title}"
 
 # Convenience rule to remove all output.
 # Run with command: snakemake clean
