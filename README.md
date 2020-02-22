@@ -12,6 +12,15 @@ Calculates line block count, total line count, and average line block length for
 
 - **Romeo talks slightly more** than Juliet; however, **Juliet's lines are wittier** (Lisa denies any allegations of bias)
 
+## Usage
+```
+git clone https://github.com/lisakmalins/Snakespeare.git
+cd Snakespeare
+snakemake
+ls output
+```
+All output will appear as tab-delimited text files in `output/` directory.
+
 ----
 
 ## Scripts
@@ -24,12 +33,3 @@ Counts literal lines, as in lines of iambic pentameter, for salient characters i
 
 ### AvgLineLength.py
 Counts the average line block length for salient characters in _Romeo & Juliet_ and _Hamlet_.
-
-## Usage
-```
-git clone https://github.com/lisakmalins/Snakespeare.git
-cd Snakespeare
-snakemake
-ls output
-```
-All output will appear as tab-delimited text files in `output/` directory.
