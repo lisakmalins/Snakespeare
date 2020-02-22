@@ -20,16 +20,3 @@ snakemake
 ls output
 ```
 All output will appear as tab-delimited text files in `output/` directory.
-
-----
-
-## Scripts
-
-### CountLineBlocks.py
-Counts line blocks, as in contiguous chunks of dialogue, for salient characters in _Romeo & Juliet_ and _Hamlet_. (E.g., Juliet's "What's in a name?" monologue is one line block.)
-
-### CountTotalLines.py
-Counts literal lines, as in lines of iambic pentameter, for salient characters in _Romeo & Juliet_ and _Hamlet_. (E.g., Juliet's "What's in a name?" monologue is 12 literal lines.)
-
-### AvgLineLength.py
-Counts the average line block length for salient characters in _Romeo & Juliet_ and _Hamlet_.
