@@ -44,8 +44,6 @@ The installer will ask you some questions to complete installation. Review and a
 To finish configuring miniconda:
 ```
 source $HOME/.bashrc
-conda config --add envs_dirs ./.conda/envs
-conda config --add pkgs_dirs ./.conda/pkgs
 ```
 
 To install git:
@@ -66,6 +64,11 @@ cd Snakespeare
 ### Step 3: Build and activate the conda environment
 When you __build the conda environment__, Conda obtains all the software listed in `environment.yaml`. You only need to do this step once.
 ```
+# Recommended: prevent conda from crashing if home folder is not writable
+conda config --add envs_dirs ./.conda/envs
+conda config --add pkgs_dirs ./.conda/pkgs
+
+# Build snakespeare conda environment
 conda env create -f environment.yaml
 ```
 
