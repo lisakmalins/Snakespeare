@@ -2,7 +2,14 @@
 Snakespeare is a simple, entertaining, and bioinformatics-free Snakemake workflow
 designed for first-time workflow users and workflow developers.
 
-Snakespeare has many of the same steps and features as typical bioinformatics Snakemake pipelines. This is an ideal "practice pipeline" to become familiar with Snakemake before running other workflows or writing a workflow yourself.
+The moving parts of Snakespeare are similar to many bioinformatics Snakemake pipelines:
+- `Snakefile` – rules for all steps of workflow are written out here
+- `config.yaml` – parameters users can customize are listed here
+- `environment.yaml` – lists dependencies to be installed into conda virtual environment
+- `data/` – all input and output files live in this directory
+- `scripts/` – all Python and R scripts live in this directory
+
+This is an ideal practice pipeline to become familiar with Snakemake before running other workflows or writing a workflow yourself.
 
 ## Snakespeare results
 This workflow calculates and plots how much different characters speak in Shakespeare's tragedies _Romeo & Juliet_ and _Hamlet_.
@@ -22,18 +29,20 @@ This workflow calculates and plots how much different characters speak in Shakes
 ## Usage
 You can run Snakespeare either on your computer or on a server.
 
-### Step 1: Install miniconda and git
+### STEP 1: Install miniconda and git
 
 #### Installing conda and git on your computer
-If you want to run Snakespeare on your computer, you can download git and miniconda from the following links:
+If you want to run Snakespeare on your computer, you can __download git and miniconda__ from the following links:
 - Download git: https://git-scm.com/downloads
 - Download miniconda: https://conda.io/en/latest/miniconda.html
 
+After you have git and conda installed, continue to STEP 2.
+
 #### Installing conda and git on a server
-If you are using a work or lab server, ask your sysadmin if git and conda are installed already. If so, skip to Step 2.
+If you are using a work or lab server, ask your sysadmin if git and conda are installed already. If so, skip to STEP 2.
 
 
-To download miniconda:
+To __download miniconda__:
 ```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
@@ -46,22 +55,22 @@ To finish configuring miniconda:
 source $HOME/.bashrc
 ```
 
-To install git:
+To __install git__:
 ```
 conda install git
 ```
 
-### Step 2: Clone the repository
+### STEP 2: Clone the repository
 
 In the terminal, navigate to where you want to download Snakespeare.
 
-Copy and paste these commands to "clone" this repository and then "change directory" into the folder.
+Copy and paste these commands to __clone this repository__ and then "change directory" into the folder.
 ```
 git clone https://github.com/lisakmalins/Snakespeare.git
 cd Snakespeare
 ```
 
-### Step 3: Build and activate the conda environment
+### STEP 3: Build and activate the conda environment
 When you __build the conda environment__, Conda obtains all the software listed in `environment.yaml`. You only need to do this step once.
 ```
 # Recommended: prevent conda from crashing if home folder is not writable
@@ -77,10 +86,10 @@ Finally, you will need to __activate the environment__. The environment is named
 source activate snakespeare
 ```
 
-### Step 4: Run Snakespeare
-Run the snakemake workflow like this:
+### STEP 4: Run Snakespeare
+__Run the snakemake workflow__ like this:
 ```
 snakemake
 ```
 
-That's it! The plots will appear in the folder `Snakespeare/data/plots`.
+That's it! The workflow should finish within a few seconds. The plots will appear in the folder `Snakespeare/data/plots`.
