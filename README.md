@@ -3,11 +3,12 @@ Snakespeare is a simple, entertaining, and bioinformatics-free Snakemake workflo
 designed for first-time workflow users and workflow developers.
 
 The moving parts of Snakespeare are similar to many bioinformatics Snakemake pipelines:
-- `Snakefile` – rules for all steps of workflow are written out here
+- `Snakefile` – contains rules for all steps of workflow
 - `config.yaml` – parameters users can customize are listed here
-- `environment.yaml` – lists dependencies to be installed into conda virtual environment
-- `data/` – all input and output files live in this directory
+- `environment.yaml` – lists software dependencies to be installed into conda virtual environment
 - `scripts/` – all Python and R scripts live in this directory
+- `data/` – all input and output files live in this directory
+
 
 This is an ideal practice pipeline to become familiar with Snakemake before running other workflows or writing a workflow yourself.
 
@@ -85,6 +86,8 @@ Finally, you will need to __activate the environment__. The environment is named
 ```
 source activate snakespeare
 ```
+
+When you want to deactivate the environment later, you can do so with the command `conda deactivate`.
 
 ### STEP 4: Run Snakespeare
 __Run the snakemake workflow__ like this:
