@@ -41,38 +41,15 @@ This workflow calculates and plots how much different characters speak in Shakes
 
 
 ## Usage
-You can run Snakespeare either on your computer or on a server.
 
 ### STEP 1: Install miniconda and git
+To run Snakespeare, you will need __git__ and __conda__.
 
-#### Installing conda and git on your computer
-If you want to run Snakespeare on your computer, you can __download git and miniconda__ from the following links:
+If you are running Snakespeare on your computer, you can download git and miniconda from their websites:
 - Download git: https://git-scm.com/downloads
 - Download miniconda: https://conda.io/en/latest/miniconda.html
 
-After you have git and conda installed, continue to STEP 2.
-
-#### Installing conda and git on a server
-If you are using a work or lab server, ask your sysadmin if git and conda are installed already. If so, skip to STEP 2.
-
-
-To __download miniconda__:
-```bash
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
-```
-
-The installer will ask you some questions to complete installation. Review and accept the license, accept or change home location, and answer yes to placing it in your path.
-
-To finish configuring miniconda:
-```bash
-source $HOME/.bashrc
-```
-
-To __install git__:
-```bash
-conda install git
-```
+If you are running Snakespeare on a server, see [server instructions](server_install.md) for how to install miniconda and git from the command line.
 
 ### STEP 2: Clone the repository
 
@@ -86,12 +63,8 @@ cd Snakespeare
 
 ### STEP 3: Build and activate the conda environment
 When you __build the conda environment__, Conda obtains all the software listed in `environment.yaml`. You only need to do this step once.
-```bash
-# Recommended: prevent conda from crashing if home folder is not writable
-conda config --add envs_dirs ./.conda/envs
-conda config --add pkgs_dirs ./.conda/pkgs
 
-# Build snakespeare conda environment
+```bash
 conda env create -f environment.yaml
 ```
 
@@ -108,4 +81,4 @@ __Run the snakemake workflow__ like this:
 snakemake
 ```
 
-That's it! The workflow should finish within a few seconds. The plots will appear in the folder `Snakespeare/data/plots`.
+That's it! The workflow should finish within a few seconds. The plots will appear in the folder `Snakespeare/data/plots/`.
