@@ -21,6 +21,13 @@ This is an ideal practice pipeline to become familiar with Snakemake before runn
 ## Snakespeare results
 This workflow calculates and plots how much different characters speak in Shakespeare's tragedies _Romeo & Juliet_ and _Hamlet_.
 
+<br />
+<div align="center">
+  <img src="images/rulegraph.png" alt="Snakespeare rule graph" />
+  <p><i>Summary of Snakefile rules.</i></p>
+</div>
+
+
 ### Interesting statistics
 - **Hamlet** talks the most with over **1428 lines** of iambic pentameter.
 

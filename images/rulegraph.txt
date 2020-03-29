@@ -1,0 +1,20 @@
+digraph snakemake_dag {
+    graph[bgcolor=white, margin=0];
+    node[shape=box, style=rounded, fontname=sans,                 fontsize=10, penwidth=2];
+    edge[penwidth=2, color=grey];
+	0[label = "targets", color = "0.15 0.6 0.85", style="rounded"];
+	1[label = "plot_total_lines", color = "0.99 0.6 0.85", style="rounded"];
+	2[label = "plot_dialogue_chunks", color = "0.60 0.6 0.85", style="rounded"];
+	3[label = "plot_chunk_lengths", color = "0.25 0.6 0.85", style="rounded"];
+	4[label = "count_total_lines", color = "0.99 0.6 0.85", style="rounded"];
+	5[label = "count_dialogue_chunks", color = "0.60 0.6 0.85", style="rounded"];
+	6[label = "chunk_lengths", color = "0.25 0.6 0.85", style="rounded"];
+	3 -> 0
+	1 -> 0
+	2 -> 0
+	4 -> 1
+	5 -> 2
+	6 -> 3
+	4 -> 6
+	5 -> 6
+}

@@ -1,0 +1,34 @@
+digraph snakemake_dag {
+    graph[bgcolor=white, margin=0];
+    node[shape=box, style=rounded, fontname=sans,                 fontsize=10, penwidth=2];
+    edge[penwidth=2, color=grey];
+	0[label = "targets", color = "0.15 0.6 0.85", style="rounded,dashed"];
+	1[label = "plot_total_lines\nplay: ham", color = "0.99 0.6 0.85", style="rounded,dashed"];
+	2[label = "plot_total_lines\nplay: raj", color = "0.99 0.6 0.85", style="rounded,dashed"];
+	3[label = "plot_dialogue_chunks\nplay: ham", color = "0.60 0.6 0.85", style="rounded,dashed"];
+	4[label = "plot_dialogue_chunks\nplay: raj", color = "0.60 0.6 0.85", style="rounded,dashed"];
+	5[label = "plot_chunk_lengths\nplay: ham", color = "0.25 0.6 0.85", style="rounded,dashed"];
+	6[label = "plot_chunk_lengths\nplay: raj", color = "0.25 0.6 0.85", style="rounded,dashed"];
+	7[label = "count_total_lines\nplay: ham", color = "0.99 0.6 0.85", style="rounded,dashed"];
+	8[label = "count_total_lines\nplay: raj", color = "0.99 0.6 0.85", style="rounded,dashed"];
+	9[label = "count_dialogue_chunks\nplay: ham", color = "0.60 0.6 0.85", style="rounded,dashed"];
+	10[label = "count_dialogue_chunks\nplay: raj", color = "0.60 0.6 0.85", style="rounded,dashed"];
+	11[label = "chunk_lengths\nplay: ham", color = "0.25 0.6 0.85", style="rounded,dashed"];
+	12[label = "chunk_lengths\nplay: raj", color = "0.25 0.6 0.85", style="rounded,dashed"];
+	1 -> 0
+	2 -> 0
+	3 -> 0
+	4 -> 0
+	5 -> 0
+	6 -> 0
+	7 -> 1
+	8 -> 2
+	9 -> 3
+	10 -> 4
+	11 -> 5
+	12 -> 6
+	9 -> 11
+	7 -> 11
+	10 -> 12
+	8 -> 12
+}

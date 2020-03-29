@@ -5,6 +5,7 @@ channels:
   - r
   - defaults
 dependencies:
+  - graphviz=2.40.1
   - python=3.7.3
   - r-base=3.6.1
   - r-dplyr=0.8.3
