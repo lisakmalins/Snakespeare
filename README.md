@@ -44,7 +44,7 @@ If you are using a work or lab server, ask your sysadmin if git and conda are in
 
 
 To __download miniconda__:
-```
+```bash
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
@@ -52,12 +52,12 @@ bash Miniconda3-latest-Linux-x86_64.sh
 The installer will ask you some questions to complete installation. Review and accept the license, accept or change home location, and answer yes to placing it in your path.
 
 To finish configuring miniconda:
-```
+```bash
 source $HOME/.bashrc
 ```
 
 To __install git__:
-```
+```bash
 conda install git
 ```
 
@@ -66,14 +66,14 @@ conda install git
 In the terminal, navigate to where you want to download Snakespeare.
 
 Copy and paste these commands to __clone this repository__ and then "change directory" into the folder.
-```
+```bash
 git clone https://github.com/lisakmalins/Snakespeare.git
 cd Snakespeare
 ```
 
 ### STEP 3: Build and activate the conda environment
 When you __build the conda environment__, Conda obtains all the software listed in `environment.yaml`. You only need to do this step once.
-```
+```bash
 # Recommended: prevent conda from crashing if home folder is not writable
 conda config --add envs_dirs ./.conda/envs
 conda config --add pkgs_dirs ./.conda/pkgs
@@ -83,7 +83,7 @@ conda env create -f environment.yaml
 ```
 
 Finally, you will need to __activate the environment__. The environment is named "snakespeare," and the software will only be accessible while the environment is active.
-```
+```bash
 source activate snakespeare
 ```
 
@@ -91,7 +91,7 @@ When you want to deactivate the environment later, you can do so with the comman
 
 ### STEP 4: Run Snakespeare
 __Run the snakemake workflow__ like this:
-```
+```bash
 snakemake
 ```
 
