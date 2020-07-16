@@ -45,11 +45,23 @@ This workflow calculates and plots how much different characters speak in Shakes
 ### STEP 1: Install miniconda and git
 To run Snakespeare, you will need __git__ and __conda__.
 
-If you are running Snakespeare on your computer, you can download git and miniconda from their websites:
-- Download git: https://git-scm.com/downloads
-- Download miniconda: https://conda.io/en/latest/miniconda.html
+#### Windows users
+Windows 10 users will need to install the Ubuntu app from the Windows Store, which give you access to a Unix terminal environment.
+- For more info on setting up the Ubuntu app, I recommend [this excellent guide](https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide/blob/master/readmes/02_WSL_Ubuntu_setup.md).
+- Next, see [command-line instructions](command_line_install.md) for how to install miniconda in your new Unix terminal.
+- You do not need to install git because it should come pre-installed in the Ubuntu app.
 
-If you are running Snakespeare on a server, see [server instructions](server_install.md) for how to install miniconda and git from the command line.
+#### Mac users
+Mac users can install git and miniconda from the following websites:
+- Download git: https://git-scm.com/downloads
+- Download miniconda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html
+
+#### Linux users
+Linux desktop users can install git and miniconda from the following websites:
+- Download git: https://git-scm.com/downloads
+- Download miniconda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
+
+If you are running Snakespeare on a server without a graphical user interface, see [command-line instructions](server_install.md) for how to install miniconda and git from the terminal.
 
 ### STEP 2: Clone the repository
 
