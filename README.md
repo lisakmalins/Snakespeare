@@ -9,11 +9,11 @@
 Snakespeare is a simple, entertaining, and bioinformatics-free Snakemake workflow designed for first-time workflow users and workflow developers.
 
 The moving parts of Snakespeare are similar to many bioinformatics Snakemake pipelines:
-- `Snakefile` – contains rules for all steps of workflow
-- `config.yaml` – parameters users can customize are listed here
-- `environment.yaml` – lists software dependencies to be installed into conda virtual environment
-- `scripts/` – all Python and R scripts live in this directory
-- `data/` – all input and output files live in this directory
+- [`Snakefile`](Snakefile) – contains rules for all steps of workflow
+- [`config.yaml`](config.yaml) – parameters users can customize are listed here
+- [`environment.yaml`](environment.yaml) – lists software dependencies to be installed into conda virtual environment
+- [`scripts/`](scripts) – all Python and R scripts live in this directory
+- [`data/`](data) – all input and output files live in this directory
 
 
 This is an ideal practice pipeline to become familiar with Snakemake before running other workflows or writing a workflow yourself.
