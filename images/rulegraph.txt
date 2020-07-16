@@ -8,7 +8,7 @@ digraph snakemake_dag {
 	3[label = "plot_chunk_lengths", color = "0.25 0.6 0.85", style="rounded"];
 	4[label = "count_total_lines", color = "0.99 0.6 0.85", style="rounded"];
 	5[label = "count_dialogue_chunks", color = "0.60 0.6 0.85", style="rounded"];
-	6[label = "chunk_lengths", color = "0.25 0.6 0.85", style="rounded"];
+	6[label = "calculate_chunk_lengths", color = "0.25 0.6 0.85", style="rounded"];
 	3 -> 0
 	1 -> 0
 	2 -> 0

@@ -72,7 +72,7 @@ rule count_total_lines:
 # How long are each character's dialogue chunks, on average?
 # (In other words, once a character starts talking,
 # how many lines of iambic pentameter do they usually say?)
-rule chunk_lengths:
+rule calculate_chunk_lengths:
     input:
         "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt",
         "data/total_lines/{play}_total_lines_per_char.txt"
