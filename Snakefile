@@ -57,7 +57,7 @@ rule count_dialogue_chunks:
     output:
         "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt"
     script:
-        "scripts/CountLineBlocks.py"
+        "scripts/count_dialogue_chunks.py"
 
 # How many total lines of iambic pentameter does each character have?
 rule count_total_lines:
@@ -67,7 +67,7 @@ rule count_total_lines:
     output:
         "data/total_lines/{play}_total_lines_per_char.txt"
     script:
-        "scripts/CountTotalLines.py"
+        "scripts/count_total_lines.py"
 
 # How long are each character's dialogue chunks, on average?
 # (In other words, once a character starts talking,
@@ -79,7 +79,7 @@ rule calculate_chunk_lengths:
     output:
         "data/chunk_lengths/{play}_avg_chunk_length_per_char.txt"
     script:
-        "scripts/AvgLineLength.py"
+        "scripts/calculate_chunk_lengths.py"
 
 def wildcard_to_title(wildcards):
     if wildcards.play == "ham":
@@ -97,7 +97,7 @@ rule plot_dialogue_chunks:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript scripts/dialogue_chunks.R {input} {output} {params.title}"
+        "Rscript scripts/plot_dialogue_chunks.R {input} {output} {params.title}"
 
 rule plot_total_lines:
     input:
@@ -107,7 +107,7 @@ rule plot_total_lines:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript scripts/total_lines.R {input} {output} {params.title}"
+        "Rscript scripts/plot_total_lines.R {input} {output} {params.title}"
 
 rule plot_chunk_lengths:
     input:
@@ -117,7 +117,7 @@ rule plot_chunk_lengths:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript scripts/avg_chunk_length.R {input} {output} {params.title}"
+        "Rscript scripts/plot_chunk_lengths.R {input} {output} {params.title}"
 
 # Convenience rule to remove all output.
 # Run with command: snakemake clean
