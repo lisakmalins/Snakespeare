@@ -23,8 +23,11 @@ In the targets rule, we see this expand function:
 Since there are 2 plays, Snakemake reads 2 wildcard values from the config file,
 and expands to create 2 end filenames:
 
-    "data/chunk_lengths/ham_avg_chunk_length_per_char.txt   data/chunk_lengths/raj_avg_chunk_length_per_char.txt"
-                           ^^^                                                    ^^^
+    "data/chunk_lengths/ham_avg_chunk_length_per_char.txt"
+                        ^^^
+
+    "data/chunk_lengths/raj_avg_chunk_length_per_char.txt"
+                        ^^^
 
 Snakemake knows that those 2 files are the end goal.
 Then it will run whatever rules are necessary to create those 2 files,
