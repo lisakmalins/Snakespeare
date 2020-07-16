@@ -123,7 +123,7 @@ rule plot_chunk_lengths:
 # Run with command: snakemake clean
 rule clean:
     shell: """
-    for dir in data/dialogue_chunks data/total_lines data/chunk_lengths
+    for dir in data/dialogue_chunks data/total_lines data/chunk_lengths data/plots
     do
         if [ -d $dir ]; then rm -r $dir; fi
     done
