@@ -82,8 +82,9 @@ conda env create -f environment.yaml
 
 Finally, you will need to __activate the environment__. The environment is named "snakespeare," and the software will only be accessible while the environment is active.
 ```bash
-source activate snakespeare
+conda activate snakespeare
 ```
+> Note: for older versions of Anaconda, you may need to use the command `source activate snakespeare` instead.
 
 When you want to deactivate the environment later, you can do so with the command `conda deactivate`.
 
