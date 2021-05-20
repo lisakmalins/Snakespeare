@@ -48,7 +48,6 @@ To run Snakespeare, you will need __git__ and __conda__.
 <details>
 <summary><b>Click here for instructions for Windows</b></summary>
 
-#### Windows users
 <details>
 <summary>Run Snakespeare via Anaconda prompt (recommended for new users)</summary>
 
@@ -78,7 +77,6 @@ If you are already using Windows Subsystem for Linux/the Ubuntu app, see [comman
 <details>
 <summary><b>Click here for instructions for Mac</b></summary>
 
-#### Mac users
 ##### Installing Git for Mac
 On your Mac, open Terminal. Type `git` and press Enter.
 - If a bunch of text appears (these are the usage instructions for git), congratulations, you already have git installed! Skip to **Installing Miniconda for Mac**.
@@ -98,7 +96,6 @@ Done! Make sure you close any terminal windows that you have open, then continue
 <details>
 <summary><b>Click here for instructions for Linux</b></summary>
 
-#### Linux users
 <details>
 <summary>Linux desktop users</summary>
 
