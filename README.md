@@ -71,8 +71,15 @@ Linux desktop users can install git and miniconda from the following websites:
 If you are running Snakespeare on a server without a graphical user interface, see [command-line instructions](server_install.md) for how to install miniconda and git from the terminal.
 
 ### STEP 2: Clone the repository
+> Note: if you installed software in Step 1, make sure you close any old terminal windows and open a new one.
 
-In the terminal, navigate to where you want to download Snakespeare.
+Open a new terminal window and navigate to where you want to download Snakespeare.
+
+If you are not sure, I recommend you copy and paste these commands to __make a new directory called `GitHub_repos`__, then "change directory" into the folder:
+```bash
+mkdir GitHub_repos
+cd GitHub_repos
+```
 
 Copy and paste these commands to __clone this repository__ and then "change directory" into the folder.
 ```bash
