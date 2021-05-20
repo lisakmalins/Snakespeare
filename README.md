@@ -51,7 +51,7 @@ To run Snakespeare, you will need __git__ and __conda__.
 <details>
 <summary>Run Snakespeare via Anaconda prompt (recommended for new users)</summary>
 
-##### Installing Miniconda3 for Windows
+#### Installing Miniconda3 for Windows
 Head over to the Anaconda website and download a [Windows installer for Miniconda3](https://docs.conda.io/en/latest/miniconda.html#windows-installers).
 > If you are not sure which to choose, pick the highest version of Python.
 >
@@ -59,10 +59,10 @@ Head over to the Anaconda website and download a [Windows installer for Minicond
 
 Run the installer and follow the instructions to complete your installation of Miniconda3.
 
-##### Open Anaconda Prompt
+#### Open Anaconda Prompt
 Now click the Start menu and search for "__Anaconda prompt__." This is a version of the Windows "command prompt" terminal that includes miniconda.
 
-##### Installing Git for Windows
+#### Installing Git for Windows
 In Anaconda prompt, copy and paste the following to install git:
 ```sh
 conda install git
@@ -81,14 +81,14 @@ If you are already using Windows Subsystem for Linux (aka the Ubuntu app), see [
 <details>
 <summary><b>Click here for instructions for Mac</b></summary>
 
-##### Installing Git for Mac
+#### Installing Git for Mac
 On your Mac, open Terminal. Type `git` and press Enter.
 - If a bunch of text appears (these are the usage instructions for git), congratulations, you already have git installed! Skip to **Installing Miniconda for Mac**.
 - If you see `git: command not found`, then you will need to get git for Mac. The easiest method is to [install Xcode](https://apps.apple.com/us/app/xcode/id497799835), which is a suite of developer tools provided by Apple.
 - After installing Xcode, open a *new* terminal window and try typing `git` again. You should see the usage instructions now.
 > If you still see `git: command not found`, please [let me know](https://github.com/lisakmalins/Snakespeare/issues/new) so I can help.
 
-##### Installing Miniconda for Mac
+#### Installing Miniconda for Mac
 - To get Miniconda for Mac, download an installer from the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html).
 - If you are not sure which to choose, download the __Python 3.9 Miniconda3 MacOSX 64-bit pkg__.
 - Run the installer that just downloaded, and follow the instructions to complete your installation of Miniconda.
