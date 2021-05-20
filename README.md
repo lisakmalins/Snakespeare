@@ -52,10 +52,15 @@ To run Snakespeare, you will need __git__ and __conda__.
 <summary>Run Snakespeare via Anaconda prompt (recommended for new users)</summary>
 
 ##### Installing Miniconda3 for Windows
-Head over to the Anaconda website and download a [Windows installer for Miniconda3](https://docs.conda.io/en/latest/miniconda.html#windows-installers). If you are not sure which to choose, pick the highest version of Python. You can check whether your system is 64-bit or 32-bit under __Settings__ > __About__ > __Device specifications__ > __System type__.
+Head over to the Anaconda website and download a [Windows installer for Miniconda3](https://docs.conda.io/en/latest/miniconda.html#windows-installers).
+> If you are not sure which to choose, pick the highest version of Python.
+>
+> You can check whether your system is 64-bit or 32-bit under __Settings__ > __About__ > __Device specifications__ > __System type__.
+
+Run the installer and follow the instructions to complete your installation of Miniconda3.
 
 ##### Open Anaconda Prompt
-Now click the Start menu and search for "__Anaconda prompt__." This is a version of Windows command prompt that includes miniconda. You can continue to use Anaconda prompt as your terminal throughout this tutorial.
+Now click the Start menu and search for "__Anaconda prompt__." This is a version of the Windows "command prompt" terminal that includes miniconda.
 
 ##### Installing Git for Windows
 In Anaconda prompt, copy and paste the following to install git:
@@ -69,9 +74,8 @@ That's it! Continue to STEP 2.
 <details>
 <summary>Run Snakespeare via WSL (advanced users)</summary>
 
-If you are already using Windows Subsystem for Linux/the Ubuntu app, see [command-line instructions](command_line_install.md) for how to install miniconda and git in your Linux terminal.
+If you are already using Windows Subsystem for Linux (aka the Ubuntu app), see [command-line instructions](command_line_install.md) for how to install miniconda and git in your Linux terminal. Then continue to STEP 2.
 </details>
-<br />
 </details>
 
 <details>
