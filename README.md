@@ -105,13 +105,15 @@ Done! Make sure you close any terminal windows that you have open, then continue
 
 - Head to the [git website](https://git-scm.com/download/linux) for instructions to install git with your distribution's package manager.
 - Head to the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for instructions to download and run a Miniconda installer.
+
+After installing git and miniconda, close any terminal windows you have open and continue to STEP 2.
 </details>
 
 
 <details>
 <summary>Linux server users</summary>
 
-If you would like to run Snakespeare on a server, check with your supervisor or sysadmin to see if the server already has git and conda installed. If you do need to install software (and have permission to do so), please see the [command-line instructions](command_line_install.md).
+If you would like to run Snakespeare on a server, check with your supervisor or sysadmin to see if the server already has git and conda installed. If you do need to install software (and have permission to do so), please see the [command-line instructions](command_line_install.md). Then continue to STEP 2.
 </details>
 </details>
 
