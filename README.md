@@ -49,10 +49,12 @@ To run Snakespeare, you will need __git__ and __conda__.
 <summary><b>Click here for instructions for Windows</b></summary>
 
 #### Windows users
-Windows 10 users will need to install the Ubuntu app from the Windows Store, which give you access to a Unix terminal environment.
-- For more info on setting up the Ubuntu app, I recommend [this excellent guide](https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide/blob/master/readmes/02_WSL_Ubuntu_setup.md).
-- Next, see [command-line instructions](command_line_install.md) for how to install miniconda in your new Unix terminal.
-- You do not need to install git because it should come pre-installed in the Ubuntu app.
+<details>
+<summary>Run Snakespeare via WSL (advanced users)</summary>
+
+If you are already using Windows Subsystem for Linux/the Ubuntu app, see [command-line instructions](command_line_install.md) for how to install miniconda and git in your Linux terminal.
+</details>
+<br />
 </details>
 
 <details>
