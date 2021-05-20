@@ -103,7 +103,7 @@ Linux desktop users can install git and miniconda from the following websites:
 - Download git: https://git-scm.com/downloads
 - Download miniconda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html
 
-If you are running Snakespeare on a server without a graphical user interface, see [command-line instructions](server_install.md) for how to install miniconda and git from the terminal.
+If you are running Snakespeare on a server without a graphical user interface, see [command-line instructions](command_line_install.md) for how to install miniconda and git from the terminal.
 </details>
 
 ### STEP 2: Clone the repository
