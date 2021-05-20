@@ -89,6 +89,9 @@ On your Mac, open Terminal. Type `git` and press Enter.
 ##### Installing Miniconda for Mac
 - To get Miniconda for Mac, download an installer from the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html).
 - If you are not sure which to choose, download the __Python 3.9 Miniconda3 MacOSX 64-bit pkg__.
+- Run the installer that just downloaded, and follow the instructions to complete your installation of Miniconda.
+
+Done! Make sure you close any terminal windows that you have open, then continue to STEP 2.
 
 </details>
 
@@ -104,8 +107,6 @@ If you are running Snakespeare on a server without a graphical user interface, s
 </details>
 
 ### STEP 2: Clone the repository
-> Note: if you installed software in Step 1, make sure you close any old terminal windows and open a new one.
-
 Open a new terminal window and navigate to where you want to download Snakespeare.
 
 If you are not sure, I recommend you copy and paste these commands to __make a new directory called `GitHub_repos`__, then "change directory" into the folder:
