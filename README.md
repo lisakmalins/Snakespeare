@@ -52,9 +52,16 @@ Windows 10 users will need to install the Ubuntu app from the Windows Store, whi
 - You do not need to install git because it should come pre-installed in the Ubuntu app.
 
 #### Mac users
-Mac users can install git and miniconda from the following websites:
-- Download git: https://git-scm.com/downloads
-- Download miniconda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html
+##### Installing Git for Mac
+On your Mac, open Terminal. Type `git` and press Enter.
+- If a bunch of text appears (these are the usage instructions for git), congratulations, you already have git installed! Skip to **Installing Miniconda for Mac**.
+- If you see `git: command not found`, then you will need to get git for Mac. The easiest method is to [install Xcode](https://apps.apple.com/us/app/xcode/id497799835), which is a suite of developer tools provided by Apple.
+- After installing Xcode, open a *new* terminal window and try typing `git` again. You should see the usage instructions now.
+> If you still see `git: command not found`, please [let me know](https://github.com/lisakmalins/Snakespeare/issues/new) so I can help.
+
+##### Installing Miniconda for Mac
+- To get Miniconda for Mac, download an installer from the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html).
+- If you are not sure which to choose, download the __Python 3.9 Miniconda3 MacOSX 64-bit pkg__.
 
 #### Linux users
 Linux desktop users can install git and miniconda from the following websites:
