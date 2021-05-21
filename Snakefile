@@ -18,16 +18,16 @@ The "targets" rule lists the end goals of the workflow.
 It always appears as the first rule of the Snakefile.
 In the targets rule, we see this expand function:
 
-    expand("data/chunk_lengths/{play}_avg_chunk_length_per_char.txt", play=config["plays"])
+    expand("data/tables/{play}_avg_chunk_length_per_char.txt", play=config["plays"])
 
 Since there are 2 plays, Snakemake reads 2 wildcard values from the config file,
 and expands to create 2 end filenames:
 
-    "data/chunk_lengths/ham_avg_chunk_length_per_char.txt"
-                        ^^^
+    "data/tables/ham_avg_chunk_length_per_char.txt"
+                 ^^^
 
-    "data/chunk_lengths/raj_avg_chunk_length_per_char.txt"
-                        ^^^
+    "data/tables/raj_avg_chunk_length_per_char.txt"
+                 ^^^
 
 Snakemake knows that those 2 files are the end goal.
 Then it will run whatever rules are necessary to create those 2 files,
@@ -55,7 +55,7 @@ rule count_dialogue_chunks:
         "data/texts/{play}.txt",
         "data/texts/{play}_characters.txt"
     output:
-        "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt"
+        "data/tables/{play}_dialogue_chunks_per_char.txt"
     script:
         "scripts/count_dialogue_chunks.py"
 
@@ -65,7 +65,7 @@ rule count_total_lines:
         "data/texts/{play}.txt",
         "data/texts/{play}_characters.txt"
     output:
-        "data/total_lines/{play}_total_lines_per_char.txt"
+        "data/tables/{play}_total_lines_per_char.txt"
     script:
         "scripts/count_total_lines.py"
 
@@ -74,10 +74,10 @@ rule count_total_lines:
 # how many lines of iambic pentameter do they usually say?)
 rule calculate_chunk_lengths:
     input:
-        "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt",
-        "data/total_lines/{play}_total_lines_per_char.txt"
+        "data/tables/{play}_dialogue_chunks_per_char.txt",
+        "data/tables/{play}_total_lines_per_char.txt"
     output:
-        "data/chunk_lengths/{play}_avg_chunk_length_per_char.txt"
+        "data/tables/{play}_avg_chunk_length_per_char.txt"
     script:
         "scripts/calculate_chunk_lengths.py"
 
@@ -91,7 +91,7 @@ def wildcard_to_title(wildcards):
 
 rule plot_dialogue_chunks:
     input:
-        "data/dialogue_chunks/{play}_dialogue_chunks_per_char.txt"
+        "data/tables/{play}_dialogue_chunks_per_char.txt"
     output:
         "data/plots/{play}_dialogue_chunks_per_char.png"
     params:
@@ -101,7 +101,7 @@ rule plot_dialogue_chunks:
 
 rule plot_total_lines:
     input:
-        "data/total_lines/{play}_total_lines_per_char.txt"
+        "data/tables/{play}_total_lines_per_char.txt"
     output:
         "data/plots/{play}_total_lines_per_char.png"
     params:
@@ -111,7 +111,7 @@ rule plot_total_lines:
 
 rule plot_chunk_lengths:
     input:
-        "data/chunk_lengths/{play}_avg_chunk_length_per_char.txt"
+        "data/tables/{play}_avg_chunk_length_per_char.txt"
     output:
         "data/plots/{play}_avg_chunk_length_per_char.png"
     params:
@@ -123,7 +123,7 @@ rule plot_chunk_lengths:
 # Run with command: snakemake clean
 rule clean:
     shell: """
-    for dir in data/dialogue_chunks data/total_lines data/chunk_lengths data/plots
+    for dir in data/tables data/plots
     do
         if [ -d $dir ]; then rm -r $dir; fi
     done
