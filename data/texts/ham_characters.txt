@@ -1,5 +1,4 @@
 King
-Marcellus
 Hamlet
 Polonius
 Horatio
@@ -17,7 +16,7 @@ Reynaldo
 Clown
 Other Clown
 Fortinbras
-Captain.
+Captain
 Ambassador
 Getrude
 Ophelia
