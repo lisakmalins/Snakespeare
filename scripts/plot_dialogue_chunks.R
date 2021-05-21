@@ -10,8 +10,8 @@ output = args[2]
 title = gsub("_", " ", args[3])
 
 # Echo parameters to user
-cat("Reading total line data from:\t", source, fill=TRUE)
-cat("Saving total line plot to:\t", output, fill=TRUE)
+cat("Reading number of speeches data from:\t", source, fill=TRUE)
+cat("Saving number of speeches plot to:\t", output, fill=TRUE)
 cat("Title of play:\t", title, fill=TRUE)
 
 # Load data
@@ -23,9 +23,9 @@ dialogue_chunks = read_delim(source,
 # Plot data
 ggplot(dialogue_chunks, aes(x=reorder(character, num_chunks), y=num_chunks)) +
   geom_bar(stat="identity") +
-  labs(y="Number of dialogue chunks",
+  labs(y="Number of distinct speeches",
        x=NULL,
-       title=paste("Number of dialogue chunks by character in", title)) +
+       title=paste("Talkativeness for characters in", title)) +
   coord_flip()
 
 # Save

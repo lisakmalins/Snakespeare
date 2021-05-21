@@ -10,8 +10,8 @@ output = args[2]
 title = gsub("_", " ", args[3])
 
 # Echo parameters to user
-cat("Reading total line data from:\t", source, fill=TRUE)
-cat("Saving total line plot to:\t", output, fill=TRUE)
+cat("Reading average speech length data from:\t", source, fill=TRUE)
+cat("Saving average speech length plot to:\t", output, fill=TRUE)
 cat("Title of play:\t", title, fill=TRUE)
 
 # Load data
@@ -23,9 +23,9 @@ avg_line_length = read_delim(source,
 # Plot data
 ggplot(avg_line_length, aes(x=reorder(character, avg_line_length), y=avg_line_length)) +
   geom_bar(stat="identity") +
-  labs(y="Average lines per dialogue chunk",
+  labs(y="Average speech length (lines of iambic pentameter)",
        x=NULL,
-       title=paste("Average lines per dialogue chunk by character in", title)) +
+       title=paste("Longwindedness for characters in", title)) +
   coord_flip()
 
 # Save

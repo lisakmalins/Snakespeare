@@ -23,9 +23,9 @@ total_lines = read_delim(source,
 # Plot data
 ggplot(total_lines, aes(x=reorder(character, total_lines), y=total_lines)) +
   geom_bar(stat="identity") +
-  labs(y="Lines of iambic pentameter",
+  labs(y="Total lines of iambic pentameter",
        x=NULL,
-       title=paste("Total lines of iambic pentameter by character in", title)) +
+       title=paste("Airtime for characters in", title)) +
   coord_flip()
 
 # Save
