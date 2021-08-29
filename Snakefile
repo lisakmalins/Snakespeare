@@ -18,15 +18,15 @@ The "targets" rule lists the end goals of the workflow.
 It always appears as the first rule of the Snakefile.
 In the targets rule, we see this expand function:
 
-    expand("data/tables/{play}_speech_length.txt", play=config["plays"])
+    expand("data/tables/{play}_avg_speech_length.txt", play=config["plays"])
 
 Since there are 2 plays, Snakemake reads 2 wildcard values from the config file,
 and expands to create 2 end filenames:
 
-    "data/tables/ham_speech_length.txt"
+    "data/tables/ham_avg_speech_length.txt"
                  ^^^
 
-    "data/tables/raj_speech_length.txt"
+    "data/tables/raj_avg_speech_length.txt"
                  ^^^
 
 Snakemake knows that those 2 files are the end goal.
@@ -43,9 +43,9 @@ configfile: "config.yaml"
 # it will look at the rules below to find out how to make them.
 rule targets:
     input:
-        expand("data/plots/{play}_airtime.png", play=config["plays"]),
-        expand("data/plots/{play}_number_of_speeches.png", play=config["plays"]),
-        expand("data/plots/{play}_speech_length.png", play=config["plays"])
+        expand("data/plots/{play}_total_lines.png", play=config["plays"]),
+        expand("data/plots/{play}_num_speeches.png", play=config["plays"]),
+        expand("data/plots/{play}_avg_speech_length.png", play=config["plays"])
 
 # How many dialogue chunks does each character have?
 # (In other words, how many times does each character start talking?
@@ -55,7 +55,7 @@ rule count_dialogue_chunks:
         "data/texts/{play}.txt",
         "data/texts/{play}_characters.txt"
     output:
-        "data/tables/{play}_number_of_speeches.txt"
+        "data/tables/{play}_num_speeches.txt"
     script:
         "scripts/count_speeches.py"
 
@@ -65,7 +65,7 @@ rule count_total_lines:
         "data/texts/{play}.txt",
         "data/texts/{play}_characters.txt"
     output:
-        "data/tables/{play}_airtime.txt"
+        "data/tables/{play}_total_lines.txt"
     script:
         "scripts/count_total_lines.py"
 
@@ -74,10 +74,10 @@ rule count_total_lines:
 # how many lines of iambic pentameter do they usually say?)
 rule calculate_chunk_lengths:
     input:
-        "data/tables/{play}_number_of_speeches.txt",
-        "data/tables/{play}_airtime.txt"
+        "data/tables/{play}_num_speeches.txt",
+        "data/tables/{play}_total_lines.txt"
     output:
-        "data/tables/{play}_speech_length.txt"
+        "data/tables/{play}_avg_speech_length.txt"
     script:
         "scripts/calculate_speech_length.py"
 
@@ -91,9 +91,9 @@ def wildcard_to_title(wildcards):
 
 rule plot_dialogue_chunks:
     input:
-        "data/tables/{play}_number_of_speeches.txt"
+        "data/tables/{play}_num_speeches.txt"
     output:
-        "data/plots/{play}_number_of_speeches.png"
+        "data/plots/{play}_num_speeches.png"
     params:
         title=wildcard_to_title
     shell:
@@ -101,9 +101,9 @@ rule plot_dialogue_chunks:
 
 rule plot_total_lines:
     input:
-        "data/tables/{play}_airtime.txt"
+        "data/tables/{play}_total_lines.txt"
     output:
-        "data/plots/{play}_airtime.png"
+        "data/plots/{play}_total_lines.png"
     params:
         title=wildcard_to_title
     shell:
@@ -111,9 +111,9 @@ rule plot_total_lines:
 
 rule plot_chunk_lengths:
     input:
-        "data/tables/{play}_speech_length.txt"
+        "data/tables/{play}_avg_speech_length.txt"
     output:
-        "data/plots/{play}_speech_length.png"
+        "data/plots/{play}_avg_speech_length.png"
     params:
         title=wildcard_to_title
     shell:
