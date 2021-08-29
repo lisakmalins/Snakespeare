@@ -6,7 +6,7 @@
 </div>
 <br /><br />
 
-Snakespeare is a simple, entertaining, and bioinformatics-free Snakemake workflow designed for first-time workflow users and workflow developers.
+Snakespeare is a simple, entertaining, and bioinformatics-free workflow designed for first-time Snakemake users and developers.
 
 The moving parts of Snakespeare are similar to many bioinformatics Snakemake pipelines:
 - [`Snakefile`](Snakefile) – contains rules for all steps of workflow
