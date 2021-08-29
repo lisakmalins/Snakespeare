@@ -53,6 +53,7 @@ To run Snakespeare, you will need two pieces of software: __git__ and __conda__.
 <!------------------------------ Begin Windows instructions ------------------------------>
 <details>
 <summary><b>Click here for instructions for Windows</b></summary>
+<table><tr><td>
 
 <details>
 <summary>Run Snakespeare via Anaconda prompt (recommended for new users)</summary>
@@ -82,12 +83,14 @@ That's it! Continue to STEP 2.
 
 If you are already using Windows Subsystem for Linux (aka the Ubuntu app), see [command-line instructions](command_line_install.md) for how to install miniconda and git in your Linux terminal. Then continue to STEP 2.
 </details>
+</td></tr></table>
 </details>
 
 <!------------------------------ End Windows instructions ------------------------------>
 <!------------------------------ Begin Mac instructions ------------------------------>
 <details>
 <summary><b>Click here for instructions for Mac</b></summary>
+<table><tr><td>
 
 #### Installing Git for Mac
 On your Mac, open Terminal. Type `git` and press Enter.
@@ -103,12 +106,14 @@ On your Mac, open Terminal. Type `git` and press Enter.
 
 Done! Make sure you close any terminal windows that you have open, then continue to STEP 2.
 
+</td></tr></table>
 </details>
 
 <!------------------------------ End Mac instructions ------------------------------>
 <!------------------------------ Begin Linux instructions ------------------------------>
 <details>
 <summary><b>Click here for instructions for Linux</b></summary>
+<table><tr><td>
 
 <details>
 <summary>Linux desktop users</summary>
@@ -125,6 +130,7 @@ After installing git and miniconda, close any terminal windows you have open and
 
 If you would like to run Snakespeare on a server, check with your supervisor or sysadmin to see if the server already has git and conda installed. If you do need to install software (and have permission to do so), please see the [command-line instructions](command_line_install.md). Then continue to STEP 2.
 </details>
+</td></tr></table>
 </details>
 <!------------------------------ End Linux instructions ------------------------------>
 
