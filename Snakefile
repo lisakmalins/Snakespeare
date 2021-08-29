@@ -45,7 +45,8 @@ rule targets:
     input:
         expand("data/plots/{play}_total_lines.png", play=config["plays"]),
         expand("data/plots/{play}_num_speeches.png", play=config["plays"]),
-        expand("data/plots/{play}_avg_speech_length.png", play=config["plays"])
+        expand("data/plots/{play}_avg_speech_length.png", play=config["plays"]),
+        "data/plots/all_statistics.png",
 
 # How many dialogue chunks does each character have?
 # (In other words, how many times does each character start talking?
@@ -118,6 +119,16 @@ rule plot_chunk_lengths:
         title=wildcard_to_title
     shell:
         "Rscript scripts/plot_speech_length.R {input} {output} {params.title}"
+
+rule plot_all_metrics:
+    input:
+        expand("data/tables/{play}_{metric}.txt",
+            play=config["plays"],
+            metric=["num_speeches", "total_lines", "avg_speech_length"])
+    output:
+        "data/plots/all_statistics.png"
+    shell:
+        "Rscript scripts/plot_all_metrics.R {output}"
 
 # Convenience rule to remove all output.
 # Run with command: snakemake clean
