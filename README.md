@@ -8,15 +8,24 @@
 
 Snakespeare is a simple, entertaining, and bioinformatics-free workflow designed for first-time Snakemake users and developers.
 
+## Snakespeare learning goals
+This tutorial is ideal for beginners, including folks who have never used the terminal before.
+
+After working through this tutorial, you will learn:
+- How to __access the terminal__ on your computer (Windows, Mac, or Linux)
+- How to __clone a repository__ from GitHub
+- How to __build and activate a conda environment__
+- How to __run a Snakemake workflow__ and view the results
+
+### Diving deeper
+In addition, this repository is a simple demonstration of Snakemake for workflow developers.
+
 The moving parts of Snakespeare are identical to the Snakemake pipelines I use every day for bioinformatics work:
 - [`Snakefile`](Snakefile) – contains rules for all steps of workflow
 - [`config.yaml`](config.yaml) – parameters users can customize are listed here
 - [`environment.yaml`](environment.yaml) – lists software dependencies to be installed into conda virtual environment
 - [`scripts/`](scripts) – all Python and R scripts live in this directory
 - [`data/`](data) – all input and output files live in this directory
-
-
-This is an ideal practice pipeline to become familiar with Snakemake before running other workflows or writing a workflow yourself.
 
 ## Snakespeare results
 This workflow calculates and plots how much different characters speak in Shakespeare's tragedies _Romeo & Juliet_ and _Hamlet_.
