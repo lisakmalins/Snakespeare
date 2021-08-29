@@ -36,7 +36,10 @@ This workflow calculates and plots how much different characters speak in Shakes
 ## Usage
 
 ### STEP 1: Install miniconda and git
-To run Snakespeare, you will need __git__ and __conda__.
+To run Snakespeare, you will need two pieces of software: __git__ and __conda__.
+- __git__ is a tool for downloading the code for Snakespeare from GitHub.
+- __conda__ is a tool for accessing all software dependencies (including R, Python, and Snakemake).
+> All software dependencies will be installed into a "virtual environment," so Snakespeare will not conflict with any Python or R software you have set up already.
 
 <details>
 <summary><b>Click here for instructions for Windows</b></summary>
