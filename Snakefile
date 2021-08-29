@@ -57,7 +57,7 @@ rule count_dialogue_chunks:
     output:
         "data/tables/{play}_number_of_speeches.txt"
     script:
-        "scripts/count_dialogue_chunks.py"
+        "scripts/count_speeches.py"
 
 # How many total lines of iambic pentameter does each character have?
 rule count_total_lines:
@@ -79,7 +79,7 @@ rule calculate_chunk_lengths:
     output:
         "data/tables/{play}_speech_length.txt"
     script:
-        "scripts/calculate_chunk_lengths.py"
+        "scripts/calculate_speech_length.py"
 
 def wildcard_to_title(wildcards):
     if wildcards.play == "ham":
@@ -97,7 +97,7 @@ rule plot_dialogue_chunks:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript scripts/plot_dialogue_chunks.R {input} {output} {params.title}"
+        "Rscript scripts/plot_speeches.R {input} {output} {params.title}"
 
 rule plot_total_lines:
     input:
@@ -117,7 +117,7 @@ rule plot_chunk_lengths:
     params:
         title=wildcard_to_title
     shell:
-        "Rscript scripts/plot_chunk_lengths.R {input} {output} {params.title}"
+        "Rscript scripts/plot_speech_length.R {input} {output} {params.title}"
 
 # Convenience rule to remove all output.
 # Run with command: snakemake clean
