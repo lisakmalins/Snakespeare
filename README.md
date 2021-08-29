@@ -35,11 +35,11 @@ This workflow calculates and plots how much different characters speak in Shakes
 
 - Hamlet's uncle **Claudius** talks the second most with over **500 lines** of iambic pentameter. It must run in the family.
 
-- Besides the Chorus in _Romeo and Juliet_, the **Ghost of King Hamlet** is the most long-winded with an average monologue length of **6.3 lines**.
+- Besides the Chorus in _Romeo and Juliet_, the **Ghost of King Hamlet** is the most long-winded with an average speech length of **6.3 lines**.
 
-- **Friar Lawrence** is a close second with an average monologue length of **6.2 lines**.
+- **Friar Lawrence** is a close second with an average speech length of **6.2 lines**.
 
-- **Romeo talks slightly more** than Juliet; however, **Juliet's lines are wittier**.
+- **Romeo talks slightly more than Juliet** (however, Juliet's lines are wittier).
 
 
 ## Usage
