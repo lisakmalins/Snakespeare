@@ -50,6 +50,7 @@ To run Snakespeare, you will need two pieces of software: __git__ and __conda__.
 - __conda__ is a tool for accessing all software dependencies (including R, Python, and Snakemake).
 > All software dependencies will be installed into a "virtual environment," so Snakespeare will not conflict with any Python or R software you have set up already.
 
+<!------------------------------ Begin Windows instructions ------------------------------>
 <details>
 <summary><b>Click here for instructions for Windows</b></summary>
 
@@ -83,6 +84,8 @@ If you are already using Windows Subsystem for Linux (aka the Ubuntu app), see [
 </details>
 </details>
 
+<!------------------------------ End Windows instructions ------------------------------>
+<!------------------------------ Begin Mac instructions ------------------------------>
 <details>
 <summary><b>Click here for instructions for Mac</b></summary>
 
@@ -102,6 +105,8 @@ Done! Make sure you close any terminal windows that you have open, then continue
 
 </details>
 
+<!------------------------------ End Mac instructions ------------------------------>
+<!------------------------------ Begin Linux instructions ------------------------------>
 <details>
 <summary><b>Click here for instructions for Linux</b></summary>
 
@@ -121,6 +126,7 @@ After installing git and miniconda, close any terminal windows you have open and
 If you would like to run Snakespeare on a server, check with your supervisor or sysadmin to see if the server already has git and conda installed. If you do need to install software (and have permission to do so), please see the [command-line instructions](command_line_install.md). Then continue to STEP 2.
 </details>
 </details>
+<!------------------------------ End Linux instructions ------------------------------>
 
 ### STEP 2: Clone the repository
 Open a new terminal window and navigate to where you want to download Snakespeare.
