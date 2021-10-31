@@ -1,3 +1,6 @@
 plays:
   "ham": "Hamlet"
   "raj": "Romeo and Juliet"
+
+# Minimum number of lines for a character to be included in final plot
+total_lines_cutoff: 25
