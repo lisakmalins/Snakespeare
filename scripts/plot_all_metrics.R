@@ -16,6 +16,9 @@ suppressPackageStartupMessages(library(yaml))
 args <- commandArgs(trailingOnly = TRUE)
 output = args[1]
 
+##-------------------- Read config.yaml --------------------##
+config <- read_yaml("config.yaml")
+
 ##-------------------- Prepare list of plays and metrics --------------------##
 plays = c("ham", "raj")
 metrics = c("num_speeches", "total_lines", "avg_speech_length")
