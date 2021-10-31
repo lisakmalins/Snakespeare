@@ -72,7 +72,11 @@ all_data_rbind <-
   do.call("rbind", play_data)
 
 # Filter out characters with few lines
-total_lines_cutoff <- 25
+if ("total_lines_cutoff" %in% names(config)) {
+  total_lines_cutoff <- config[["total_lines_cutoff"]]
+} else {
+  total_lines_cutoff <- 25
+}
 
 print(paste("Characters with fewer than", total_lines_cutoff, "will be excluded."))
 print(paste("The following rows will be dropped:"))
