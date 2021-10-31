@@ -9,6 +9,8 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(tidyr))
 # ggplot2 is required for plotting the data.
 suppressPackageStartupMessages(library(ggplot2))
+# yaml is required for reading the configuration file (config.yaml).
+suppressPackageStartupMessages(library(yaml))
 
 ##-------------------- Read arguments --------------------##
 args <- commandArgs(trailingOnly = TRUE)
