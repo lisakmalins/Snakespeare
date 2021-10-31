@@ -20,15 +20,8 @@ output = args[1]
 config <- read_yaml("config.yaml")
 
 ##-------------------- Prepare list of plays and metrics --------------------##
-plays = c("ham", "raj")
+plays <- config[["plays"]]
 metrics = c("num_speeches", "total_lines", "avg_speech_length")
-
-# Prepare full descriptions of plays and metrics to use on plot
-play_descriptions <-
-  c(
-    ham="Hamlet",
-    raj="Romeo and Juliet"
-    )
 
 metric_descriptions <-
   c(
@@ -40,7 +33,7 @@ metric_descriptions <-
 ##-------------------- Read data --------------------##
 # Read dataframes for all metrics for all plays
 data = list()
-for (play in plays) {
+for (play in names(plays)) {
   data[[play]] = list()
 
   for (metric in metrics) {
@@ -55,7 +48,7 @@ for (play in plays) {
 ##-------------------- Transform data --------------------##
 # For each play, join data for all metrics into a single table
 play_data <- list()
-for (play in plays) {
+for (play in names(plays)) {
 
   play_data[[play]] <-
     # Use two full outer joins to combine 3 datasets into one table
@@ -115,7 +108,7 @@ ggplot(all_data_longer,
              scales="free",
              # Use more descriptive labels prepared earlier
              labeller=labeller(metric = metric_descriptions,
-                               play = play_descriptions)) +
+                               play = unlist(plays))) +
   # Make the bar graph horizontal to more easily read character names
   coord_flip() +
   # Tweak theme
