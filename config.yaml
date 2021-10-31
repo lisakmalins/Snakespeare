@@ -2,5 +2,12 @@ plays:
   "ham": "Hamlet"
   "raj": "Romeo and Juliet"
 
+# Names and descriptions of each metric that will be plotted
+# Changing the order here will change order on the plot
+metrics:
+  num_speeches: "Talkativeness\n(Number of speeches)"
+  total_lines: "Airtime\n(Total lines)"
+  avg_speech_length: "Longwindedness\n(Average lines per speech)"
+
 # Minimum number of lines for a character to be included in final plot
 total_lines_cutoff: 25
