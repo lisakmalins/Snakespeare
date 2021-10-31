@@ -21,14 +21,7 @@ config <- read_yaml("config.yaml")
 
 ##-------------------- Prepare list of plays and metrics --------------------##
 plays <- config[["plays"]]
-metrics = c("num_speeches", "total_lines", "avg_speech_length")
-
-metric_descriptions <-
-  c(
-    num_speeches="Talkativeness\n(Number of speeches)",
-    total_lines="Airtime\n(Total lines)",
-    avg_speech_length="Longwindedness\n(Average lines per speech)"
-    )
+metrics <- config[["metrics"]]
 
 ##-------------------- Read data --------------------##
 # Read dataframes for all metrics for all plays
@@ -36,7 +29,7 @@ data = list()
 for (play in names(plays)) {
   data[[play]] = list()
 
-  for (metric in metrics) {
+  for (metric in names(metrics)) {
     data[[play]][[metric]] <-
       read_tsv(paste0("data/tables/", play, "_", metric, ".txt"),
                  col_names=c("character", metric),
@@ -52,9 +45,9 @@ for (play in names(plays)) {
 
   play_data[[play]] <-
     # Use two full outer joins to combine 3 datasets into one table
-    data[[play]][[metrics[1]]] %>%
-    full_join(data[[play]][[metrics[2]]], by="character") %>%
-    full_join(data[[play]][[metrics[3]]], by="character") %>%
+    data[[play]][[names(metrics)[1]]] %>%
+    full_join(data[[play]][[names(metrics)[2]]], by="character") %>%
+    full_join(data[[play]][[names(metrics)[3]]], by="character") %>%
     # Arrange descendingly by first metric
     arrange(desc(.[[2]])) %>%
     # Add column for name of play
@@ -90,13 +83,13 @@ all_data_rbind <-
 # Pivot data from "wide" into "long" format to prepare for `facet_wrap`
 all_data_longer <-
   all_data_rbind %>%
-  pivot_longer(cols=c("total_lines", "num_speeches", "avg_speech_length"),
+  pivot_longer(cols=all_of(names(metrics)),
                names_to="metric",
                values_to="value")
 
 # Set factor levels to control order of facets in facet-wrapped plot
 all_data_longer$metric <-
-  factor(all_data_longer$metric, levels = metrics)
+  factor(all_data_longer$metric, levels = names(metrics))
 
 ##-------------------- Plot data --------------------##
 ggplot(all_data_longer,
@@ -111,7 +104,7 @@ ggplot(all_data_longer,
              cols=vars(metric),
              scales="free",
              # Use more descriptive labels prepared earlier
-             labeller=labeller(metric = metric_descriptions,
+             labeller=labeller(metric = unlist(metrics),
                                play = unlist(plays))) +
   # Make the bar graph horizontal to more easily read character names
   coord_flip() +
