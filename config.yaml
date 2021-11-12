@@ -5,9 +5,9 @@ plays:
 # Names and descriptions of each metric that will be plotted
 # Changing the order here will change order on the plot
 metrics:
-  num_speeches: "Talkativeness\n(Number of speeches)"
-  total_lines: "Airtime\n(Total lines)"
-  avg_speech_length: "Longwindedness\n(Average lines per speech)"
+  num_speeches: "Number of speeches"
+  total_lines: "Total lines"
+  avg_speech_length: "Average lines\nper speech"
 
 # Minimum number of lines for a character to be included in final plot
 total_lines_cutoff: 25
