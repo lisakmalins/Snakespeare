@@ -108,6 +108,10 @@ ggplot(all_data_longer,
                                play = unlist(plays))) +
   # Make the bar graph horizontal to more easily read character names
   coord_flip() +
+  # Add number label floating next to bars
+  geom_text(aes(label=round(value, 1)), hjust = -0.2, color="#333333") +
+  # Add a bit of extra space for the labels
+  scale_y_discrete(expand=expansion(mult=c(0, .2))) +
   # Tweak theme
   theme_bw() +
   theme(text=element_text(size=18)) +
