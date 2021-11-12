@@ -30,6 +30,8 @@ The moving parts of Snakespeare are identical to the Snakemake pipelines I use e
 ## Snakespeare results
 This workflow calculates and plots how much different characters speak in Shakespeare's tragedies _Romeo & Juliet_ and _Hamlet_.
 
+![Example output from Snakespeare workflow.](images/all_statistics.png)
+
 ### Interesting statistics
 - **Hamlet** talks the most with over **1428 lines** of iambic pentameter.
 
