@@ -28,7 +28,7 @@ The moving parts of Snakespeare are identical to the Snakemake pipelines I use e
 - [`data/`](data) – all input and output files live in this directory
 
 ## Snakespeare results
-This workflow calculates and plots how much different characters speak in Shakespeare's tragedies _Romeo & Juliet_ and _Hamlet_.
+This workflow calculates and plots how much characters speak in Shakespeare's tragedies _Hamlet_ and _Romeo & Juliet_.
 
 ![Example output from Snakespeare workflow.](images/all_statistics.png)
 
