@@ -120,6 +120,15 @@ rule plot_chunk_lengths:
     shell:
         "Rscript scripts/plot_speech_length.R {input} {output} {params.title}"
 
+rule join_metrics:
+    input:
+        expand("data/tables/{{play}}_{metric}.txt",
+            metric=["num_speeches", "total_lines", "avg_speech_length"])
+    output:
+        "data/tables/{play}_all_metrics.txt"
+    shell:
+        "Rscript scripts/join_metrics.R {input} {output}"
+
 rule plot_all_metrics:
     input:
         expand("data/tables/{play}_{metric}.txt",
