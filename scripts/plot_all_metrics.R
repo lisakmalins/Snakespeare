@@ -14,7 +14,8 @@ suppressPackageStartupMessages(library(yaml))
 
 ##-------------------- Read arguments --------------------##
 args <- commandArgs(trailingOnly = TRUE)
-output = args[1]
+input = args[0:(length(args)-1)]
+output = args[length(args)]
 
 ##-------------------- Read config.yaml --------------------##
 config <- read_yaml("config.yaml")
@@ -24,45 +25,13 @@ plays <- config[["plays"]]
 metrics <- config[["metrics"]]
 
 ##-------------------- Read data --------------------##
-# Read dataframes for all metrics for all plays
-data = list()
-for (play in names(plays)) {
-  data[[play]] = list()
-
-  for (metric in names(metrics)) {
-    data[[play]][[metric]] <-
-      read_tsv(paste0("data/tables/", play, "_", metric, ".txt"),
-                 col_names=c("character", metric),
-                 col_types="fd") %>%
-      arrange(desc(.[[2]]))
-  }
-}
-
-##-------------------- Transform data --------------------##
-# For each play, join data for all metrics into a single table
-play_data <- list()
-for (play in names(plays)) {
-
-  play_data[[play]] <-
-    # Use two full outer joins to combine 3 datasets into one table
-    data[[play]][[names(metrics)[1]]] %>%
-    full_join(data[[play]][[names(metrics)[2]]], by="character") %>%
-    full_join(data[[play]][[names(metrics)[3]]], by="character") %>%
-    # Arrange descendingly by first metric
-    arrange(desc(.[[2]])) %>%
-    # Add column for name of play
-    mutate(play=play)
-
-  # Set factor order (controls order of bars in bar graph)
-  play_data[[play]][["character"]] <-
-    factor(play_data[[play]]$character,
-           levels = rev(play_data[[play]]$character)
-           )
-}
-
 # Concatenate data for all plays into a single table
 all_data_rbind <-
-  do.call("rbind", play_data)
+  do.call("rbind", lapply(input, function(f) {
+    read_tsv(f, col_names=TRUE, col_types=cols()) %>%
+    # Set factor levels of "character" column in the order that they appear
+    mutate(character = factor(character, levels=rev(character)))
+  }))
 
 # Filter out characters with few lines
 if ("total_lines_cutoff" %in% names(config)) {

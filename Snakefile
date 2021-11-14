@@ -131,13 +131,12 @@ rule join_metrics:
 
 rule plot_all_metrics:
     input:
-        expand("data/tables/{play}_{metric}.txt",
-            play=config["plays"],
-            metric=["num_speeches", "total_lines", "avg_speech_length"])
+        expand("data/tables/{play}_all_metrics.txt",
+            play=config["plays"])
     output:
         "data/plots/all_statistics.png"
     shell:
-        "Rscript scripts/plot_all_metrics.R {output}"
+        "Rscript scripts/plot_all_metrics.R {input} {output}"
 
 # Convenience rule to remove all output.
 # Run with command: snakemake clean
