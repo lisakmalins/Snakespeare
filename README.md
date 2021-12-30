@@ -129,6 +129,8 @@ Done! Make sure you close any terminal windows that you have open, then continue
 After installing git and miniconda, close any terminal windows you have open and continue to STEP 2.
 </details>
 
+</td></tr>
+<tr><td>
 
 <details>
 <summary>Linux server users</summary>
