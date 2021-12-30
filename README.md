@@ -140,7 +140,36 @@ After installing git and miniconda, close any terminal windows you have open and
 <tr><td><details>
 <summary>Linux server users</summary>
 
-If you would like to run Snakespeare on a server, check with your supervisor or sysadmin to see if the server already has git and conda installed. If you do need to install software (and have permission to do so), please see the [command-line instructions](command_line_install.md). Then continue to STEP 2.
+If you would like to run Snakespeare on a work or lab server, check with your supervisor or sysadmin to see if git and conda are installed already. If so, continue to STEP 2.
+
+Otherwise, if you need to install software (and have permission to do so), follow the instructions below.
+
+#### Installing Miniconda on a Linux Server
+To __install miniconda__ from the command line:
+```bash
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+The installer will ask you some questions to complete installation. Review and accept the license, accept or change home location, and answer yes to placing it in your path.
+
+To finish configuring miniconda:
+```bash
+source $HOME/.bashrc
+```
+
+> Note: If your home folder is not writable on your server, conda will crash. If you experience this issue, run these commands to tell conda to store the environment in the current folder.
+> ```bash
+> conda config --add envs_dirs ./.conda/envs
+> conda config --add pkgs_dirs ./.conda/pkgs
+> ```
+
+#### Installing Git on a Linux Server
+To __install git__:
+```bash
+conda install git
+```
+
 </details></td></tr>
 </table>
 </details>
