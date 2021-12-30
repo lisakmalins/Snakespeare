@@ -83,9 +83,16 @@ That's it! Continue to STEP 2.
 
 <!-- - - - - - - - - - - - - - - Windows + WSL - - - - - - - - - - - - - - -->
 <tr><td><details>
-<summary>Run Snakespeare via WSL (advanced users)</summary>
+<summary>Run Snakespeare via Windows Subsystem for Linux (advanced users)</summary>
+If you are already using Windows Subsystem for Linux, follow the instructions below for how to install miniconda and git in your Ubuntu terminal.
 
-If you are already using Windows Subsystem for Linux (aka the Ubuntu app), see [command-line instructions](command_line_install.md) for how to install miniconda and git in your Linux terminal. Then continue to STEP 2.
+#### Installing Git in WSL
+Head to the [git website](https://git-scm.com/download/linux) and follow installation instructions for Ubuntu.
+
+#### Installing Miniconda in WSL
+Head to the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for instructions to download and run a Miniconda installer for Linux.
+
+After installing git and miniconda, close any terminal windows you have open and continue to STEP 2.
 </details></td></tr>
 
 </table>
