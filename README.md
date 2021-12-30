@@ -59,7 +59,7 @@ To run Snakespeare, you will need two pieces of software: __git__ and __conda__.
 
 <!-- - - - - - - - - - - - - - - Windows + Anaconda Prompt - - - - - - - - - - - - - - -->
 <tr><td><details>
-<summary>Run Snakespeare via Anaconda prompt (recommended for new users)</summary>
+<summary>Run Snakespeare via Anaconda prompt (easiest for beginning users)</summary>
 
 #### Installing Miniconda3 for Windows
 Head over to the Anaconda website and download a [Windows installer for Miniconda3](https://docs.conda.io/en/latest/miniconda.html#windows-installers).
@@ -72,7 +72,7 @@ Run the installer and follow the instructions to complete your installation of M
 #### Open Anaconda Prompt
 Now click the Start menu and search for "__Anaconda prompt__." This is a version of the Windows "command prompt" terminal that includes miniconda.
 
-#### Installing Git for Windows
+#### Installing Git in Anaconda Prompt
 In Anaconda prompt, copy and paste the following to install git:
 ```sh
 conda install git
