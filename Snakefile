@@ -82,21 +82,13 @@ rule calculate_chunk_lengths:
     script:
         "scripts/calculate_speech_length.py"
 
-def wildcard_to_title(wildcards):
-    if wildcards.play == "ham":
-        return "Hamlet"
-    elif wildcards.play == "raj":
-        return "Romeo_and_Juliet"
-    else:
-        raise Exception("Snakefile says: Cannot convert play wildcard to title.")
-
 rule plot_dialogue_chunks:
     input:
         "data/tables/{play}_num_speeches.txt"
     output:
         "data/plots/{play}_num_speeches.png"
     params:
-        title=wildcard_to_title
+        title=lambda wildcards: config["plays"][wildcards.play]
     shell:
         "Rscript scripts/plot_speeches.R {input} {output} {params.title}"
 
@@ -106,7 +98,7 @@ rule plot_total_lines:
     output:
         "data/plots/{play}_total_lines.png"
     params:
-        title=wildcard_to_title
+        title=lambda wildcards: config["plays"][wildcards.play]
     shell:
         "Rscript scripts/plot_total_lines.R {input} {output} {params.title}"
 
@@ -116,7 +108,7 @@ rule plot_chunk_lengths:
     output:
         "data/plots/{play}_avg_speech_length.png"
     params:
-        title=wildcard_to_title
+        title=lambda wildcards: config["plays"][wildcards.play]
     shell:
         "Rscript scripts/plot_speech_length.R {input} {output} {params.title}"
 
