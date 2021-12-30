@@ -127,8 +127,11 @@ Done! Make sure you close any terminal windows that you have open, then continue
 <tr><td><details>
 <summary>Linux desktop users</summary>
 
-- Head to the [git website](https://git-scm.com/download/linux) for instructions to install git with your distribution's package manager.
-- Head to the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for instructions to download and run a Miniconda installer.
+#### Installing Git for Linux
+Head to the [git website](https://git-scm.com/download/linux) for instructions to install git with your distribution's package manager.
+
+#### Installing Miniconda for Linux
+Head to the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for instructions to download and run a Miniconda installer.
 
 After installing git and miniconda, close any terminal windows you have open and continue to STEP 2.
 </details></td></tr>
