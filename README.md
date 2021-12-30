@@ -80,6 +80,9 @@ conda install git
 That's it! Continue to STEP 2.
 </details>
 
+</td></tr>
+<tr><td>
+
 <details>
 <summary>Run Snakespeare via WSL (advanced users)</summary>
 
