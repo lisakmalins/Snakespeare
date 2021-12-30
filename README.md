@@ -81,6 +81,37 @@ conda install git
 That's it! Continue to STEP 2.
 </details></td></tr>
 
+<tr><td><details>
+<summary>Run Snakespeare via Git Bash (good for beginning users)</summary>
+
+#### Installing Miniconda3 for Windows
+Head over to the Anaconda website and download a [Windows installer for Miniconda3](https://docs.conda.io/en/latest/miniconda.html#windows-installers).
+> If you are not sure which to choose, pick the highest version of Python.
+>
+> You can check whether your system is 64-bit or 32-bit under __Settings__ > __About__ > __Device specifications__ > __System type__.
+
+Run the installer and follow the instructions to complete your installation of Miniconda3.
+
+#### Installing Git + Git Bash for Windows
+Head to the [git website](https://git-scm.com/download/win) and download an installer for Windows. Run the installer and follow the instructions to complete the installation. This includes git as well as Git Bash, which is a terminal app that you can use to run Snakespeare.
+
+#### Enabling Conda in Git Bash
+To enable Conda within Git Bash, you'll need to add the Conda startup script to your `~/.bashrc` file, which executes every time you open Git Bash.
+
+From the Start menu, search for "Miniconda3" and click "Open File Location." Within that folder, navigate to `etc` and then `profile.d`. You should see a file called `conda.sh` in this folder. Right-click inside the window and select "Git Bash here" to open a terminal window in this folder.
+
+Run the following command to to add the Conda startup script to your `~/.bashrc`:
+```sh
+echo ". '${PWD}'/conda.sh" >> ~/.bashrc
+```
+
+After that, close the terminal window.
+
+Finally, let's double-check that conda is working in your new Git Bash terminal. From the Start menu, open __Git Bash__. Type `conda` and press Enter. If a bunch of text appears (these are the usage instructions for conda), congratulations, you're all set up! Continue to STEP 2.
+
+
+</details></td></tr>
+
 <!-- - - - - - - - - - - - - - - Windows + WSL - - - - - - - - - - - - - - -->
 <tr><td><details>
 <summary>Run Snakespeare via Windows Subsystem for Linux (advanced users)</summary>
