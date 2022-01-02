@@ -80,7 +80,8 @@ ggplot(all_data_longer,
   # Add number label floating next to bars
   geom_text(aes(label=round(value, 1)), hjust = -0.2, color="#333333") +
   # Add a bit of extra space for the labels
-  scale_y_discrete(expand=expansion(mult=c(0, .2))) +
+  # Vector is c(mult[x], add[x], mult[y], add[y])
+  scale_y_discrete(expand=c(0, 0, 0.2, 0)) +
   # Tweak theme
   theme_bw() +
   theme(text=element_text(size=18)) +
