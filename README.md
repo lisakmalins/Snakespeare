@@ -75,7 +75,7 @@ Now click the Start menu and search for "__Anaconda prompt__." This is a modifie
 #### Installing Git in Anaconda Prompt
 In Anaconda prompt, copy and paste the following to install git:
 ```sh
-conda install git
+conda install -y git
 ```
 
 That's it! Continue to STEP 2.
