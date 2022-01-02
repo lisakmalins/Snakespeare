@@ -118,7 +118,7 @@ Finally, let's double-check that conda is working in your new Git Bash terminal.
 If you are already using Windows Subsystem for Linux, follow the instructions below for how to install miniconda and git in your Ubuntu terminal.
 
 #### Installing Git in WSL
-Head to the [git website](https://git-scm.com/download/linux) and follow installation instructions for Ubuntu.
+Head to the [git website](https://git-scm.com/download/linux) and follow the installation instructions for Ubuntu.
 
 #### Installing Miniconda in WSL
 Head to the [Anaconda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for instructions to download and run a Miniconda installer for Linux.
