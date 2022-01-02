@@ -93,7 +93,7 @@ Head over to the Anaconda website and download a [Windows installer for Minicond
 Run the installer and follow the instructions to complete your installation of Miniconda3.
 
 #### Installing Git + Git Bash for Windows
-Head to the [git website](https://git-scm.com/download/win) and download an installer for Windows. Run the installer and follow the instructions to complete the installation. This includes git as well as Git Bash, which is a terminal app that you can use to run Snakespeare.
+Head to the [git website](https://git-scm.com/download/win) and download an installer for Windows. Run the installer and follow the instructions to complete the installation. This software bundle includes git as well as Git Bash, which is a terminal app that you can use to run Snakespeare.
 
 #### Enabling Conda in Git Bash
 To enable Conda within Git Bash, you'll need to add the Conda startup script to your `~/.bashrc` file, which executes every time you open Git Bash.
