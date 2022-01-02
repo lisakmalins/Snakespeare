@@ -65,7 +65,7 @@ To run Snakespeare, you will need two pieces of software: __git__ and __conda__.
 Head over to the Anaconda website and download a [Windows installer for Miniconda3](https://docs.conda.io/en/latest/miniconda.html#windows-installers).
 > If you are not sure which to choose, pick the highest version of Python.
 >
-> You can check whether your system is 64-bit or 32-bit under __Settings__ > __About__ > __Device specifications__ > __System type__.
+> You can check whether your system is 64-bit or 32-bit under __Settings__ > __System__ > __About__ > __Device specifications__ > __System type__.
 
 Run the installer and follow the instructions to complete the installation. This software bundle includes Miniconda3 as well as Anaconda Prompt, which is a terminal app that you can use to run Snakespeare.
 
@@ -88,7 +88,7 @@ That's it! Continue to STEP 2.
 Head over to the Anaconda website and download a [Windows installer for Miniconda3](https://docs.conda.io/en/latest/miniconda.html#windows-installers).
 > If you are not sure which to choose, pick the highest version of Python.
 >
-> You can check whether your system is 64-bit or 32-bit under __Settings__ > __About__ > __Device specifications__ > __System type__.
+> You can check whether your system is 64-bit or 32-bit under __Settings__ > __System__ > __About__ > __Device specifications__ > __System type__.
 
 Run the installer and follow the instructions to complete your installation of Miniconda3.
 
