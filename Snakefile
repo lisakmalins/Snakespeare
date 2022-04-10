@@ -1,37 +1,9 @@
 """
-SNAKESPEARE is a simple, entertaining, and bioinformatics-free Snakemake workflow
-designed for first-time workflow users and workflow developers.
+SNAKESPEARE is a simple and entertaining text-mining workflow
+designed to introduce Snakemake to beginning users and developers.
 
-
-SHORT INTRO TO SNAKEMAKE FOR WORKFLOW DEVELOPERS:
-
-Wildcards are the magic of Snakemake.
-In this workflow, the main wildcard is {play}.
-{play} could stand for either "ham" (for Hamlet) or "raj" (for Romeo and Juliet).
-That way, we can write generic rules that will run the same steps on both plays.
-
-So how does Snakemake know the names of the plays?
-We have them listed in the config file (config.yaml).
-We can access the list of play names from the Snakefile like this:  config["plays"]
-
-The "targets" rule lists the end goals of the workflow.
-It always appears as the first rule of the Snakefile.
-In the targets rule, we see this expand function:
-
-    expand("data/tables/{play}_avg_speech_length.txt", play=config["plays"])
-
-Since there are 2 plays, Snakemake reads 2 wildcard values from the config file,
-and expands to create 2 end filenames:
-
-    "data/tables/ham_avg_speech_length.txt"
-                 ^^^
-
-    "data/tables/raj_avg_speech_length.txt"
-                 ^^^
-
-Snakemake knows that those 2 files are the end goal.
-Then it will run whatever rules are necessary to create those 2 files,
-filling in either "ham" or "raj" for the wildcards in each rule.
+This file, called the Snakefile, orchestrates the workflow
+by calling the python and R scripts that do each step.
 """
 
 # The Snakefile is designed to be generic.
