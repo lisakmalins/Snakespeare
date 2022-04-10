@@ -13,9 +13,8 @@ def FindPlayStart(lines):
     return -1
 
 # Read in list of characters
-charsource = open(snakemake.input[1], 'r')
-chars = charsource.readlines()
-charsource.close()
+with open(snakemake.input[1], 'r') as charsource:
+    chars = charsource.readlines() 
 
 # Remove newlines
 for i in range (0, len(chars)):
@@ -23,8 +22,10 @@ for i in range (0, len(chars)):
 
 # Count each character's line blocks
 chars_dict = defaultdict(int)
-playsource = open(snakemake.input[0], 'r')
-lines = playsource.readlines()
+
+with open(snakemake.input[0], 'r') as playsource:
+    lines = playsource.readlines()
+
 i = FindPlayStart(lines)
 while i < len(lines):
     # Get line and strip to compare with chars list
@@ -34,6 +35,6 @@ while i < len(lines):
     i += 1
 
 # Output to file
-output = open(snakemake.output[0], 'w')
-for c, f in chars_dict.items():
-    output.write(c + "\t" + str(f) + '\n')
+with open(snakemake.output[0], 'w') as output:
+    for c, f in chars_dict.items():
+        output.write(f"{c} \t {f} \n")
