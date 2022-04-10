@@ -6,7 +6,7 @@
 </div>
 <br /><br />
 
-Snakespeare is a simple, entertaining, and bioinformatics-free workflow designed for first-time Snakemake users and developers.
+Snakespeare is a simple and entertaining text mining workflow designed for first-time Snakemake users and developers.
 
 ## Snakespeare learning goals
 This tutorial is ideal for beginners, including folks who have never used the terminal before.
@@ -251,4 +251,4 @@ __Run the snakemake workflow__ like this:
 snakemake
 ```
 
-That's it! The workflow should finish within a few seconds. The plots will appear in the folder `Snakespeare/data/plots/`.
+That's it! The workflow should finish within a few seconds. The output plot showing all dialogue statistics will appear in the folder `Snakespeare/data/plots/`.
