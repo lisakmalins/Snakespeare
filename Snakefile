@@ -101,13 +101,3 @@ rule plot_all_metrics:
         "data/plots/all_statistics.png"
     shell:
         "Rscript scripts/plot_all_metrics.R {input} {output}"
-
-# Convenience rule to remove all output.
-# Run with command: snakemake clean
-rule clean:
-    shell: """
-    for dir in data/tables data/plots
-    do
-        if [ -d $dir ]; then rm -r $dir; fi
-    done
-    """
