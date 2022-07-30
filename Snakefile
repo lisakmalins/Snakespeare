@@ -53,7 +53,7 @@ rule calculate_avg_speech_length:
 rule join_metrics:
     input:
         expand("data/tables/{{play}}_{metric}.txt",
-            metric=["num_speeches", "total_lines", "avg_speech_length"])
+            metric=["num_speeches", "total_lines"])
     output:
         "data/tables/{play}_all_metrics.txt"
     shell:

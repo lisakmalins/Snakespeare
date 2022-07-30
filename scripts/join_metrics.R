@@ -1,7 +1,7 @@
 # join_metrics.R
 # Accepts a list of tab-delimited files and performs a full outer join.
 # Usage:
-# Rscript join_metrics.R raj_num_speeches.txt raj_total_lines.txt raj_avg_speech_length.txt output.txt
+# Rscript join_metrics.R raj_num_speeches.txt raj_total_lines.txt output.txt
 
 
 ##-------------------- Load packages --------------------##
@@ -65,10 +65,11 @@ for (f in input) {
 ##-------------------- Join data --------------------##
 # Full outer join data together
 all_data <-
-  # Use two full outer joins to combine 3 datasets into one table
+  # Use full outer join to combine speeches and lines into one table
   data[[input[1]]] %>%
   full_join(data[[input[2]]], by="character") %>%
-  full_join(data[[input[3]]], by="character") %>%
+  # Determine average lines per speech
+  mutate(avg_speech_length=total_lines/num_speeches) %>%
   # Sort descendingly by first metric
   arrange(desc(.[[2]])) %>%
   # Add column for name of play
