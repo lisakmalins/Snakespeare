@@ -41,14 +41,14 @@ rule count_total_lines:
 # How long are each character's speeches, on average?
 # (In other words, once a character starts talking,
 # how many lines of iambic pentameter do they usually say?)
-rule join_metrics:
+rule calculate_average_speech_length:
     input:
         expand("data/tables/{{play}}_{metric}.txt",
             metric=["num_speeches", "total_lines"])
     output:
         "data/tables/{play}_all_metrics.txt"
     shell:
-        "Rscript scripts/join_metrics.R {input} {output}"
+        "Rscript scripts/calculate_speech_length.R {input} {output}"
 
 rule plot_all_metrics:
     input:

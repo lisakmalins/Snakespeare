@@ -1,7 +1,7 @@
-# join_metrics.R
+# calculate_speech_length.R
 # Accepts a list of tab-delimited files and performs a full outer join.
 # Usage:
-# Rscript join_metrics.R raj_num_speeches.txt raj_total_lines.txt output.txt
+# Rscript calculate_speech_length.R raj_num_speeches.txt raj_total_lines.txt output.txt
 
 
 ##-------------------- Load packages --------------------##
