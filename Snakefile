@@ -17,10 +17,9 @@ rule targets:
     input:
         "data/plots/all_statistics.png",
 
-# How many dialogue chunks does each character have?
-# (In other words, how many times does each character start talking?
-# After they start talking, they could say several lines of iambic pentameter.)
-rule count_dialogue_chunks:
+# How many speeches does each character have?
+# (In other words, how many times does each character start talking?)
+rule count_speeches:
     input:
         "data/texts/{play}.txt",
         "data/texts/{play}_characters.txt"
@@ -39,10 +38,10 @@ rule count_total_lines:
     script:
         "scripts/count_total_lines.py"
 
-# How long are each character's dialogue chunks, on average?
+# How long are each character's speeches, on average?
 # (In other words, once a character starts talking,
 # how many lines of iambic pentameter do they usually say?)
-rule calculate_chunk_lengths:
+rule calculate_avg_speech_length:
     input:
         "data/tables/{play}_num_speeches.txt",
         "data/tables/{play}_total_lines.txt"
