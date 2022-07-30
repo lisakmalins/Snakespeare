@@ -41,15 +41,6 @@ rule count_total_lines:
 # How long are each character's speeches, on average?
 # (In other words, once a character starts talking,
 # how many lines of iambic pentameter do they usually say?)
-rule calculate_avg_speech_length:
-    input:
-        "data/tables/{play}_num_speeches.txt",
-        "data/tables/{play}_total_lines.txt"
-    output:
-        "data/tables/{play}_avg_speech_length.txt"
-    script:
-        "scripts/calculate_speech_length.py"
-
 rule join_metrics:
     input:
         expand("data/tables/{{play}}_{metric}.txt",
