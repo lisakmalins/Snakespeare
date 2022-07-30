@@ -1,3 +1,7 @@
+"""
+Calculates average speech length for characters in Shakespeare texts.
+"""
+
 from collections import defaultdict
 
 blocks = defaultdict(int)

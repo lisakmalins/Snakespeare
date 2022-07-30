@@ -1,6 +1,6 @@
 """
-Counts line blocks, as in contiguous chunks of dialogue,
-for all important characters in Romeo & Juliet.
+Counts speeches, as in contiguous chunks of dialogue,
+for characters in Shakespeare texts.
 """
 
 from collections import defaultdict

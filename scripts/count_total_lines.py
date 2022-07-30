@@ -1,6 +1,6 @@
 """
-Counts total lines, as in lines of iambic pentameter,
-for all important characters in Romeo & Juliet.
+Counts total lines, as in literal lines of iambic pentameter,
+for characters in Shakespeare texts.
 """
 
 from collections import defaultdict
