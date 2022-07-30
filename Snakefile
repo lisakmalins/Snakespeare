@@ -46,13 +46,13 @@ rule calculate_average_speech_length:
         expand("data/tables/{{play}}_{metric}.txt",
             metric=["num_speeches", "total_lines"])
     output:
-        "data/tables/{play}_all_metrics.txt"
+        "data/tables/{play}_average_speech_length.txt"
     shell:
         "Rscript scripts/calculate_speech_length.R {input} {output}"
 
 rule plot_all_metrics:
     input:
-        expand("data/tables/{play}_all_metrics.txt",
+        expand("data/tables/{play}_average_speech_length.txt",
             play=config["plays"])
     output:
         "data/plots/all_statistics.png"
