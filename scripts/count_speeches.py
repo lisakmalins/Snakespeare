@@ -14,7 +14,7 @@ def FindPlayStart(lines):
 
 # Read in list of characters
 with open(snakemake.input[1], 'r') as charsource:
-    chars = charsource.readlines() 
+    chars = charsource.readlines()
 
 # Remove newlines
 for i in range (0, len(chars)):
@@ -37,4 +37,4 @@ while i < len(lines):
 # Output to file
 with open(snakemake.output[0], 'w') as output:
     for c, f in chars_dict.items():
-        output.write(f"{c} \t {f} \n")
+        output.write(f"{c}\t{f}\n")
