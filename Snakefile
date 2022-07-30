@@ -48,7 +48,7 @@ rule calculate_average_speech_length:
     output:
         "data/tables/{play}_average_speech_length.txt"
     shell:
-        "Rscript scripts/calculate_speech_length.R {input} {output}"
+        "Rscript scripts/calculate_speech_length.R {input} \"{wildcards.play}\" {output}"
 
 rule plot_all_metrics:
     input:
