@@ -14,11 +14,7 @@ def FindPlayStart(lines):
 
 # Read in list of characters
 with open(snakemake.input[1], 'r') as characters_input:
-    characters = characters_input.readlines()
-
-# Remove newlines
-for i in range (0, len(characters)):
-    characters[i] = characters[i].rstrip('\n')
+    characters = [l.strip() for l in characters_input.readlines()]
 
 # Count each character's lines
 lines_by_character = defaultdict(int)
