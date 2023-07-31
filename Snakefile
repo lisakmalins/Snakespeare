@@ -17,11 +17,19 @@ rule targets:
     input:
         "data/plots/all_statistics.png",
 
+rule get_dialogue:
+    input:
+        "data/texts/{play}.txt"
+    output:
+        "data/texts/{play}_dialogue.txt"
+    shell:
+        "bash scripts/get_dialogue.sh {input} > {output}"
+
 # How many speeches does each character have?
 # (In other words, how many times does each character start talking?)
 rule count_speeches:
     input:
-        "data/texts/{play}.txt",
+        "data/texts/{play}_dialogue.txt",
         "data/texts/{play}_characters.txt"
     output:
         "data/tables/{play}_num_speeches.txt"
@@ -31,7 +39,7 @@ rule count_speeches:
 # How many total lines of iambic pentameter does each character have?
 rule count_total_lines:
     input:
-        "data/texts/{play}.txt",
+        "data/texts/{play}_dialogue.txt",
         "data/texts/{play}_characters.txt"
     output:
         "data/tables/{play}_total_lines.txt"
