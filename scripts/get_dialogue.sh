@@ -23,8 +23,10 @@ sed -e '/^\[.*\]$/d' |
 sed -e 's/,* \[.*\]//g' |
 # (Remove multi-line stage directions)
 # Delete multiple lines fully enclosed by brackets
-# TODO: remove multi-line stage directions that start same line as dialogue
 sed -e '/^\[/,/\]$/d' |
+# (Remove stage directions following dialogue and continuing to next line)
+# Remove text following opening bracket and preceding closing bracket
+sed -e 's/\[.*$//' -e 's/^.*\]//' |
 # (Fix short lines of dialogue occurring immediately after character name)
 # Replace any double-spaces with a newline
 sed -e 's/  /\'$'\n''/g' |
