@@ -19,7 +19,8 @@ sed -n '/^ACT 1/,$p' |
 sed -e '/^\[.*\]$/d' |
 # (Remove partial-line stage directions)
 # Remove text enclosed by brackets but leave rest of line intact
-sed -e 's/\[.*\]//g' |
+# Also remove preceding space and comma if present
+sed -e 's/,* \[.*\]//g' |
 # (Remove multi-line stage directions)
 # Delete multiple lines fully enclosed by brackets
 # TODO: remove multi-line stage directions that start same line as dialogue

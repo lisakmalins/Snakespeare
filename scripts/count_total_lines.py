@@ -17,7 +17,7 @@ with open(snakemake.input[0], 'r') as play_input:
 i = 0
 while i < len(lines):
     # Get line and strip to compare with characters list
-    line = lines[i].strip().rstrip(',.')
+    line = lines[i].strip().rstrip('.')
     if line.isupper() and line.title() in characters:
         # If char name found, count how many lines follow
         while True:
