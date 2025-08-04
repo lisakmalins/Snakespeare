@@ -20,3 +20,4 @@ Lady Montague
 Lady Capulet
 Juliet
 Nurse
+Prince
