@@ -33,15 +33,17 @@ This workflow calculates and plots how much characters speak in Shakespeare's tr
 ![Example output from Snakespeare workflow.](images/all_statistics.png)
 
 ### Interesting statistics
-- **Hamlet** talks the most with over **1428 lines** of iambic pentameter.
+- **Hamlet** talks the most of all the characters by far, with over **1500 lines** of iambic pentameter.
 
-- Hamlet's uncle **Claudius** talks the second most with over **500 lines** of iambic pentameter. It must run in the family.
+- Hamlet's uncle, **King Claudius**, talks the second most in *Hamlet* with over **500 lines** of iambic pentameter. It must run in the family.
 
-- Besides the Chorus in _Romeo and Juliet_, the **Ghost of King Hamlet** is the most long-winded with an average speech length of **6.3 lines**.
+- Besides the Chorus in _Romeo and Juliet_, the **Ghost of King Hamlet** is the most long-winded with an average speech length of **6.9 lines**. Nice!
 
-- **Friar Lawrence** is a close second with an average speech length of **6.2 lines**.
+- **Friar Lawrence** is a close second with an average speech length of **6.3 lines**.
 
-- **Romeo talks slightly more than Juliet** (however, Juliet's lines are wittier).
+- As expected, **Romeo and Juliet** are the top speakers in their tragedy, but even their lines put together don't add up to Hamlet's.
+
+- **Romeo talks slightly more than Juliet.** However, Juliet's lines are wittier.
 
 
 ## Usage
