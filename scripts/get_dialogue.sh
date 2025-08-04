@@ -20,7 +20,7 @@ sed -e '/^\[.*\]$/d' |
 # (Remove partial-line stage directions)
 # Remove text enclosed by brackets but leave rest of line intact
 # Also remove preceding space and comma if present
-sed -e 's/,* \[.*\]//g' |
+sed -e 's/,* *\[.*\]//g' |
 # (Remove multi-line stage directions)
 # Delete multiple lines fully enclosed by brackets
 sed -e '/^\[/,/\]$/d' |
