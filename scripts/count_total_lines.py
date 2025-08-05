@@ -18,7 +18,7 @@ i = 0
 while i < len(lines):
     # Get line and strip
     line = lines[i].strip().rstrip('.')
-    if line.isupper():
+    if line.isupper() and "," not in line:
         # If char name found, count how many lines follow
         while True:
             i += 1
