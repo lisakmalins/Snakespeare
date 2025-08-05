@@ -19,7 +19,7 @@ i = 0
 while i < len(lines):
     # Get line and strip
     line = lines[i].strip().rstrip(".")
-    if line.isupper():
+    if line.isupper() and "," not in line:
         speeches_by_character[line.title()] += 1
     i += 1
 
