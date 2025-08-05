@@ -27,7 +27,9 @@ while i < len(lines):
             if i >= len(lines) or lines[i] == "\n":
                 break
             # Increment num lines for this character
-            lines_by_character[line.title()] += 1
+            # (or characters, e.g., "ROSENCRANTZ/GUILDENSTERN")
+            for name in line.title().split("/"):
+                lines_by_character[name] += 1
     else:
         i += 1
 
