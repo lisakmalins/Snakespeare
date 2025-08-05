@@ -20,7 +20,10 @@ while i < len(lines):
     # Get line and strip
     line = lines[i].strip().rstrip(".")
     if line.isupper() and "," not in line:
-        speeches_by_character[line.title()] += 1
+        # Increment num speeches for this character
+        # (or characters, e.g., "ROSENCRANTZ/GUILDENSTERN")
+        for name in line.title().split("/"):
+            speeches_by_character[name] += 1
     i += 1
 
 # Output to file
