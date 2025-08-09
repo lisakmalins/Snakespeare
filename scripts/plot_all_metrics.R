@@ -94,3 +94,8 @@ ggsave(
   height=8.5,
   width=11,
   plot=last_plot())
+
+# Delete bogus file if created
+if (file.exists("Rplots.pdf")) {
+   file.remove("Rplots.pdf")
+}
