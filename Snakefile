@@ -17,6 +17,9 @@ rule targets:
     input:
         "data/plots/all_statistics.png",
 
+# This shell script prepares the play texts for counting
+# by removing non-dialogue material (stage directions,
+# list of characters at beginning, act and scene numbers, etc.)
 rule get_dialogue:
     input:
         "data/texts/{play}.txt"
@@ -58,6 +61,7 @@ rule calculate_average_speech_length:
     shell:
         "Rscript scripts/calculate_speech_length.R {input} \"{wildcards.play}\" {output}"
 
+# Plot all metrics on a single plot
 rule plot_all_metrics:
     input:
         expand("data/tables/{play}_average_speech_length.tsv",
