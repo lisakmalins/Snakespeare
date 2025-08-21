@@ -5,10 +5,6 @@ for characters in Shakespeare texts.
 
 from collections import defaultdict
 
-# Read in list of characters
-with open(snakemake.input[1], 'r') as characters_input:
-    characters = [l.strip() for l in characters_input.readlines()]
-
 # Count each character's line blocks
 speeches_by_character = defaultdict(int)
 

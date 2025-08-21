@@ -32,8 +32,7 @@ rule get_dialogue:
 # (In other words, how many times does each character start talking?)
 rule count_speeches:
     input:
-        "data/texts/{play}_dialogue.txt",
-        "data/texts/{play}_characters.txt"
+        "data/texts/{play}_dialogue.txt"
     output:
         "data/tables/{play}_num_speeches.txt"
     script:
@@ -42,8 +41,7 @@ rule count_speeches:
 # How many total lines of iambic pentameter does each character have?
 rule count_total_lines:
     input:
-        "data/texts/{play}_dialogue.txt",
-        "data/texts/{play}_characters.txt"
+        "data/texts/{play}_dialogue.txt"
     output:
         "data/tables/{play}_total_lines.txt"
     script:
